@@ -1,0 +1,46 @@
+.el {
+  --color: black;
+}
+
+.link {
+  background: whitesmoke;
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+  // Anchors the `fill` image below; covers are square, so nothing is cropped.
+  position: relative;
+}
+
+.cover {
+  --tw-shadow: 0 5px 10px rgba(0,0,0,.12);
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 5px 10px var(--tw-shadow-color);
+  background: #f9f9f9;
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  max-width: 800px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1em 0 0.3em;
+
+  a {
+    --color-link: inherit;
+  }
+}
+
+.el--small .title {
+  font-size: 1.25rem;
+  margin-top: 0.5em;
+}
+
+.artist {
+  color: #666;
+  font-family: var(--font-sans);
+  margin: 0;
+}

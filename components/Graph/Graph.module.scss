@@ -1,0 +1,24 @@
+.el {
+  font-size: 1.25rem;
+
+  th {
+    padding-right: 0.25rem;
+  }
+
+  td {
+    height: 1px; // Hack. https://stackoverflow.com/a/3542470/219657
+    position: relative;
+    width: 100%;
+  }
+
+  td:last-child {
+    padding-left: 0.25rem;
+  }
+}
+
+.bar {
+  background: #999;
+  height: 23px;
+  width: calc(var(--count) / var(--total) * 100%);
+  transition: width 750ms ease-in-out 300ms;
+}

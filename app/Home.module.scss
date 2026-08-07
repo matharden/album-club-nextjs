@@ -1,0 +1,140 @@
+.el {
+  font-family: var(--font-serif);
+  margin-bottom: 6rem;
+
+  p {
+    color: #666;
+    font-family: var(--font-sans);
+  }
+}
+
+p.stat {
+  color: #999;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0.2em 0;
+
+  strong,
+  .strong,
+  .number {
+    color: #000;
+    font-weight: 400;
+  }
+
+  &.big {
+    font-size: 3rem;
+  }
+
+  .huge {
+    font-size: 5rem;
+    font-style: normal;
+  }
+
+  &.small {
+    font-size: 1rem;
+    br {
+      display: none;
+    }
+  }
+}
+
+.heading {
+  color: #666;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.note {
+  @extend .heading;
+  font-size: 0.75rem;
+  margin-top: 2em;
+}
+
+.heading2 {
+  border-bottom: 3px solid #000;
+  color: #666;
+  font: normal 400 1rem var(--font-serif);
+  font-family: var(--font-sans);
+  padding-bottom: 4px;
+}
+
+.filter {
+  background: #fff;
+  border-radius: 50px;
+  bottom: 1rem;
+  box-shadow: 0 0 0 3px #000;
+  padding: 8px;
+  position: fixed;
+  transition: transform 250ms;
+  right: 1rem;
+  z-index: 2;
+
+  &--on {
+    transform: translateY(-40px);
+  }
+}
+
+.list {
+  align-items: center;
+  background: #fff;
+  border-top: 3px solid #000;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  min-height: 3.5rem;
+  overflow: auto;
+  padding: 0 0.5rem;
+  position: fixed;
+  transform: translateY(100%);
+  transition: transform 250ms;
+  width: calc(100% - 1rem);
+  z-index: 1;
+
+  li {
+    font: normal 1.25rem var(--font-serif);
+  }
+
+  a {
+    padding: 0.5em;
+    white-space: nowrap;
+  }
+
+  :target {
+    color: red;
+  }
+}
+
+.list--show {
+  transform: translateY(0);
+}
+
+.suffix br {
+  display: none;
+}
+
+.graph {
+  margin-bottom: 4rem;
+  div { filter: opacity(0.7); }
+  [class*="196"] { background: #c6604e; }
+  [class*="197"] { background: #a04b5b; }
+  [class*="198"] { background: #a5597a; }
+  [class*="199"] { background: #56787a; }
+  [class*="200"] { background: #6d8e58; }
+  [class*="201"] { background: #c2af8e; }
+  [class*="202"] { background: #9c917a; }
+  [class*="203"] { background: #524635; }
+}
+
+.sort {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  float: right;
+  height: 24px;
+  padding: 0;
+  width: 24px;
+}

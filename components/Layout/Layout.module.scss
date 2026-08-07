@@ -1,0 +1,110 @@
+// The `body` rule that lived here has moved to app/globals.css — a CSS Module
+// may only contain selectors carrying at least one local class.
+
+.el {
+  margin: 1rem auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+.header {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  height: 55px;
+  margin: 1rem auto;
+  max-width: 1280px;
+  min-height: 55px;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  &--search--open {
+    position: static;
+  }
+
+  // Doesn't seem like we need this because the padding 5% takes care of it at
+  // every size.
+  // @media(min-width: 1280px) {
+  //   padding: 0 calc((100vw - 1280px) / 2);
+  // }
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+}
+
+@media(min-width: 431px) {
+  .header {
+    margin: 3rem auto;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  height: 48px;
+  padding: 0;
+  width: 48px;
+}
+
+.line {
+  border-top: 3px solid;
+  position: sticky;
+  top: 55px;
+  z-index: 2;
+}
+
+.inner {
+  border-top: 3px solid #fff;
+  margin-top: -3px;
+  position: sticky;
+  top: 52px;
+  z-index: 3;
+}
+
+.stickyWrapper {
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 6px,
+    #fff 6px,
+    #fff 100vh
+  );
+  margin: 2rem auto;
+  max-width: 1280px;
+  padding: 0 5%;
+  position: sticky;
+  top: 52px;
+  z-index: 3;
+}
+
+.link {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0 12rem;
+}
+
+.archive {
+  align-items: center;
+  border: 3px solid #000;
+  border-radius: 40px;
+  display: flex;
+  padding: 8px 24px;
+
+  img {
+    margin-right: 8px;
+  }
+}
