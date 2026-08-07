@@ -1,0 +1,69 @@
+.el {
+  display: grid;
+  // padding: 0 30px;
+  row-gap: 4rem;
+
+  // Single column.
+  // @media(min-width: 400px) {
+  //   margin: 60px auto 0;
+  // }
+
+  // Two columns.
+  @media(min-width: 800px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 5rem;
+    row-gap: 5rem;
+  }
+}
+
+.el--medium {
+  row-gap: 4rem;
+
+  @media(min-width: 512px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4rem;
+  }
+
+  @media(min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 5rem;
+    row-gap: 5rem;
+  }
+}
+
+.el--small {
+  column-gap: 4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @media(min-width: 800px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 5rem;
+    row-gap: 5rem;
+
+    &.el--half {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+.gridItem {
+  &--cols2 {
+    grid-column: span 2;
+  }
+}
+
+// Scroll snap for smallest viewports.
+.el--snap {
+  @media(max-width: 400px) {
+    height: 100vh;
+    overflow: auto;
+    row-gap: 0;
+    scroll-snap-type: y mandatory;
+
+    .gridItem {
+      height: calc(100vh - 84px);
+      padding: 56px 0 30px;
+      scroll-snap-align: center;
+    }
+  }
+}
