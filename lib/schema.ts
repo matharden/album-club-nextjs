@@ -1,19 +1,10 @@
 import { z } from "zod";
 
 /**
- * Replaces Gatsby's `createSchemaCustomization` (gatsby-node.js).
- *
- * Required/optional here mirrors the old GraphQL type definitions exactly —
- * `number`, `artist`, `title`, `hosted_by` and `played_on` were the only `!`
- * fields, and the UI already guards for the rest being absent.
- */
-
-/**
  * js-yaml resolves unquoted `2024-11-22` to a Date (the YAML timestamp type)
  * but leaves quoted `'2024-11-22'` as a string. Both spellings appear in
- * albums.yml, so normalise to a plain `YYYY-MM-DD` string — which is what
- * Gatsby's `@dateformat` handed to the components, and what code like
- * `played_on.slice(0, 4)` still expects.
+ * albums.yml, so normalise to a plain `YYYY-MM-DD` string, and what code like
+ * `played_on.slice(0, 4)` expects.
  *
  * Formatting goes through UTC deliberately: js-yaml parses a bare date as
  * midnight UTC, so local-time formatting would report the previous day for
@@ -29,9 +20,7 @@ const YamlDate = z
   });
 
 /**
- * Track durations are written as `3:57`, which Gatsby's js-yaml v3 resolved to
- * 237 via YAML 1.1 sexagesimal integers — hence the old `duration: Int!` and a
- * `toMinutes()` helper that expects seconds. js-yaml v4 dropped sexagesimal
+ * Track durations are written as `3:57`. js-yaml v4 dropped sexagesimal
  * support, so the same file now yields the string "3:57". Convert explicitly
  * rather than relying on a parser quirk; a bare number is already seconds.
  */

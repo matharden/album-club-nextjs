@@ -9,7 +9,6 @@ import ListView from "./ListView";
 
 type Params = { params: Promise<{ slug: string }> };
 
-/** Replaces `createPages` in gatsby-node.js. */
 export async function generateStaticParams() {
   const slugs = await allRouteSlugs();
   return slugs.map((slug) => ({ slug }));
@@ -53,8 +52,6 @@ export default async function SlugPage({ params }: Params) {
     }
 
     case "album-redirect":
-      // Gatsby shipped a page with a `<meta http-equiv="refresh">`; a real
-      // redirect is both faster and correct for crawlers.
       redirect(`/${route.album.slug}`);
 
     case "host":

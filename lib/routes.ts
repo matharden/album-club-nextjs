@@ -4,14 +4,12 @@ import { getContent, type AlbumWithHost } from "./content";
 import type { Host } from "./schema";
 
 /**
- * Gatsby's `createPages` put albums, hosts, years and decades all at the root
- * of the URL space. Next allows only one dynamic segment per level, so a single
- * `app/[slug]` route resolves the lot. Static routes (/archive, /stats) still
- * take precedence over the dynamic segment.
+ * Next allows only one dynamic segment per level, so a single * `app/[slug]`
+ * route resolves the lot. Static routes (/archive, /stats) still take
+ * precedence over the dynamic segment.
  */
 export type Route =
   | { kind: "album"; album: AlbumWithHost }
-  /** `/185` — the numeric shortcut, which Gatsby served as a meta-refresh page. */
   | { kind: "album-redirect"; album: AlbumWithHost }
   | { kind: "host"; host: Host; albums: AlbumWithHost[] }
   | { kind: "year"; year: number; albums: AlbumWithHost[] }
@@ -45,7 +43,6 @@ export async function resolveRoute(slug: string): Promise<Route | null> {
   return null;
 }
 
-/** Every root-level path Gatsby's createPages used to generate. */
 export async function allRouteSlugs(): Promise<string[]> {
   const { albums, hosts, years, decades } = await getContent();
   return [

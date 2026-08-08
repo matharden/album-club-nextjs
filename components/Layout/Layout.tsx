@@ -9,12 +9,6 @@ import Search from "@/components/Search";
 
 import styles from "./Layout.module.scss";
 
-/**
- * `title` is threaded through as a prop rather than read from `process.env`
- * here: Gatsby inlined env vars into the browser bundle, whereas in Next only
- * `NEXT_PUBLIC_*` reaches the client. The server layer reads it and passes it
- * down.
- */
 const Layout = ({
   breadcrumb,
   children,
