@@ -97,7 +97,12 @@ export const rangeToDuration = (
   mode?: "days",
 ) => toDuration(new Date(from), new Date(to), mode);
 
-/** Renders "2 years, 3 months" with each count emboldened, one unit per line. */
+/**
+ * Renders "2 years, 3 months" with each count emboldened, one unit per line.
+ *
+ * The comma is kept alongside the line break: `.stat.small` hides the `<br>`,
+ * and the units then need it as their only separator.
+ */
 export const markupDuration = (duration: string): ReactNode => {
   const units = duration.split(", ").map((unit) => {
     const [count, name] = unit.split(" ");
@@ -112,7 +117,7 @@ export const markupDuration = (duration: string): ReactNode => {
 
   return units.reduce((prev, curr, index) => (
     <Fragment key={index}>
-      {prev}
+      {prev},{" "}
       <br />
       {curr}
     </Fragment>
