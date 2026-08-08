@@ -3,8 +3,6 @@
 A Next.js (App Router) site for a record-listening club. `data/albums.yml` is
 the CMS: commit a change to it and Vercel rebuilds.
 
-Migrated from the GatsbyJS version, with the GraphQL data layer removed.
-
 ## Running locally
 
 ```shell
@@ -20,7 +18,7 @@ npm run dev
 | `npm start` | Serve the production build |
 | `npm run typecheck` | `tsc --noEmit` |
 
-There is also a `docker-compose up` setup, carried over from the Gatsby project.
+There is also a `docker-compose up` setup.
 
 ## Architecture
 
@@ -35,30 +33,27 @@ app/**/page.tsx        # Server Components call getContent() directly
 
 `getContent()` is wrapped in React's `cache()`, so the YAML is read, parsed and
 indexed once per build rather than once per route. It returns the albums plus
-derived indexes (`bySlug`, `byNumber`, `byHost`, `byYear`, `byDecade`), each of
-which replaces a GraphQL query the Gatsby version ran.
+derived indexes (`bySlug`, `byNumber`, `byHost`, `byYear`, `byDecade`).
 
 `lib/content.ts` imports `server-only`, so pulling it into a Client Component
 fails at build time instead of trying to bundle `fs`.
 
 ### Routing
 
-Gatsby's `createPages` put albums, hosts, years and decades all at the root of
-the URL space. Next allows one dynamic segment per level, so a single
-`app/[slug]` route resolves all of them via `lib/routes.ts`:
+Leverage dynamic segments for albums, hosts, years and decades using
+`app/[slug]` route resolving all of them via `lib/routes.ts`:
 
 | Path | Page |
 | --- | --- |
 | `/185-fire-and-water` | Album |
-| `/185` | Redirects to the album (Gatsby used a `<meta refresh>`) |
+| `/185` | Redirects to the album |
 | `/mat` | Albums chosen by a host |
 | `/1994` | Albums released that year |
 | `/1990s` | Albums released that decade |
 | `/archive`, `/stats`, `/getter` | Static routes, which take precedence |
 
-`/albums.json` is a static Route Handler replacing the `fs.writeFileSync` step
-in `gatsby-node.js`. Its shape is a contract — the search box, `/stats` and
-`/getter` all fetch it.
+`/albums.json` is a static Route Handler. Its shape is a contract — the search 
+box, `/stats` and `/getter` all fetch it.
 
 ## Editing content
 
@@ -68,9 +63,8 @@ being absent. `hosted_by` must match a `name` in `data/hosts.yml` or the build
 fails.
 
 Covers go in `public/covers/` and are referenced as
-`cover: ../images/covers/<file>` — the path the Gatsby version used, rewritten
-to a public URL by the schema. An album with no local cover falls back to
-`cover_external`.
+`cover: ../images/covers/<file>`, rewritten to a public URL by the schema. An
+album with no local cover falls back to `cover_external`.
 
 ## Notes from the Gatsby migration
 
@@ -90,19 +84,6 @@ Three data-layer details are worth knowing, because they are silent traps:
 - **Empty YAML** parses to `undefined`. That is the project's deliberate zero
   state, so the schema maps it to `[]`; anything actually malformed still fails
   the build.
-
-Behaviour that changed deliberately:
-
-- `/185` is a real HTTP redirect rather than a meta-refresh page.
-- The host name on the album number badge is now styled — the Gatsby version
-  passed `styles.host.name`, which was `undefined`, so `.host` never applied.
-- `/stats` counted hosts with `countBy(albums, "host")`, which collapsed every
-  host into one `[object Object]` bucket once `host` became an object. It counts
-  by `host.name` now.
-- Clicking a search result closes the search overlay, which client-side
-  navigation no longer does for free.
-- `/getter` reads its Spotify token from `NEXT_PUBLIC_SPOTIFY_TOKEN` instead of
-  a hardcoded constant.
 
 ### Mapping
 
@@ -131,7 +112,3 @@ All are read at build time, so changing one needs a rebuild. See `.env.example`.
 | `GOOGLE_FONT_NAME` | Google Font to load, exposed as `--font-name` |
 | `GOOGLE_ANALYTICS_ID` | Optional; no script is injected when unset |
 | `NEXT_PUBLIC_SPOTIFY_TOKEN` | Optional; `/getter` only |
-
-Gatsby inlined every env var into the browser bundle. Next only exposes
-`NEXT_PUBLIC_*`, so the site title is read on the server and passed to the
-layout as a prop.

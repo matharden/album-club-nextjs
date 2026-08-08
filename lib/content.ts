@@ -43,8 +43,7 @@ function push<K, V>(map: Map<K, V[]>, key: K, value: V): void {
 }
 
 /**
- * Reads, validates and indexes the YAML content — the replacement for Gatsby's
- * GraphQL layer.
+ * Reads, validates and indexes the YAML content.
  *
  * `cache()` dedupes this across every route in a single build; without it the
  * files are re-read and re-parsed once per page.
@@ -60,9 +59,8 @@ export const getContent = cache(async () => {
 
   const hostsByName = new Map(hosts.map((host) => [host.name, host]));
 
-  // Gatsby's `@link(by: "name", from: "hosted_by")` resolved a missing host to
-  // null, which then crashed the Number component on `data.host.name`. Fail the
-  // build instead — the YAML is hand-edited and this is the main safety net.
+  // Fail the build when host is missing — the YAML is hand-edited and this is
+  // the main safety net.
   const albums: AlbumWithHost[] = albumsData.map((album) => {
     const host = hostsByName.get(album.hosted_by);
     if (!host) {
@@ -122,9 +120,8 @@ export const getContent = cache(async () => {
 });
 
 /**
- * The album before and after in file order. Mirrors the `previous`/`next` edge
- * fields Gatsby passed into the album template — with the list newest-first,
- * `next` is the older album.
+ * The album before and after in file order. With the list newest-first, `next`
+ * is the older album.
  */
 export const getNeighbours = cache(async (slug: string) => {
   const { albums } = await getContent();

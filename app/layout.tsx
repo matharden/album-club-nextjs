@@ -11,8 +11,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    // Pages set only their own name; Gatsby's Head exports appended the site
-    // title by hand ("Archive - Album Club").
     template: `%s - ${title}`,
   },
 };
@@ -21,7 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Replaces gatsby-omni-font-loader. */}
         {fontName && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +35,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
-        {/* Replaces gatsby-plugin-google-gtag. */}
         {googleAnalyticsId && (
           <>
             <Script
