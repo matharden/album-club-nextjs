@@ -71,7 +71,7 @@ p.stat {
   right: 1rem;
   z-index: 2;
 
-  &--on {
+  &On {
     transform: translateY(-40px);
   }
 }
@@ -108,7 +108,7 @@ p.stat {
   }
 }
 
-.list--show {
+.listShow {
   transform: translateY(0);
 }
 

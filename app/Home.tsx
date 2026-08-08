@@ -211,7 +211,7 @@ const Home = ({ albums: allAlbums, title }: { albums: AlbumWithHost[]; title: st
                 linkSuffix="s"
               />
 
-              <Grid small half>
+              <Grid half>
                 <GridItem>
                   <h2 className={styles.heading}>Newest album</h2>
                   {byReleased.slice(-1).map((album) => (
@@ -237,7 +237,6 @@ const Home = ({ albums: allAlbums, title }: { albums: AlbumWithHost[]; title: st
                 </GridItem>
 
                 <GridItem>
-                  {/* Contemporary album - data incomplete */}
                   <h2 className={styles.heading}>Contemporary album</h2>
                   {byAge.slice(0, 1).map((album) => (
                     <Album
@@ -258,7 +257,6 @@ const Home = ({ albums: allAlbums, title }: { albums: AlbumWithHost[]; title: st
                 </GridItem>
 
                 <GridItem>
-                  {/* Classic album - data incomplete */}
                   <h2 className={styles.heading}>Classic album</h2>
                   {byAge.slice(-1).map((album) => (
                     <Album
@@ -280,7 +278,7 @@ const Home = ({ albums: allAlbums, title }: { albums: AlbumWithHost[]; title: st
               </Grid>
 
               {withLength.length > 0 && (
-                <Grid small half>
+                <Grid half>
                   <GridItem>
                     {/* Shortest album */}
                     <h2 className={styles.heading}>Shortest album</h2>

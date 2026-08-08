@@ -16,7 +16,7 @@
   }
 }
 
-.el--medium {
+.elMedium {
   row-gap: 4rem;
 
   @media(min-width: 512px) {
@@ -31,7 +31,7 @@
   }
 }
 
-.el--small {
+.elSmall {
   column-gap: 4rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
@@ -40,20 +40,20 @@
     column-gap: 5rem;
     row-gap: 5rem;
 
-    &.el--half {
+    &.elHalf {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 }
 
 .gridItem {
-  &--cols2 {
+  &Cols2 {
     grid-column: span 2;
   }
 }
 
 // Scroll snap for smallest viewports.
-.el--snap {
+.elSnap {
   @media(max-width: 400px) {
     height: 100vh;
     overflow: auto;
