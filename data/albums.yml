@@ -433,7 +433,7 @@
   title: Expecting To Fly
   hosted_by: andrew
   played_on: 2025-09-22
-  cover: ../images/covers/175-expecting-to-fly.jpg
+  cover: ../images/covers/175-expecting-to-fly.webp
   released_on: 1996-02-12
   spotify: 3hSEHy0TkvR97XPCBl4F9p
   year: 1996
@@ -477,7 +477,7 @@
   title: Living Ornaments '80
   hosted_by: ed
   played_on: 2025-08-21
-  cover: ../images/covers/174-living-ornaments-80.jpg
+  cover: ../images/covers/174-living-ornaments-80.webp
   released_on: 1981-04-01
   spotify: 2UzElmXY5CRqYEodbExXjS
   year: 1981
@@ -520,7 +520,7 @@
   title: Kings of the Wild Frontier
   hosted_by: john
   played_on: 2025-07-15
-  cover: ../images/covers/173-kings-of-the-wild-frontier.jpg
+  cover: ../images/covers/173-kings-of-the-wild-frontier.webp
   released_on: 1980-09-17
   spotify: 6Ery60n0SHDiIG18DMi5cV
   year: 1980
@@ -567,7 +567,7 @@
   title: B.R.M.C.
   hosted_by: mat
   played_on: 2025-06-13
-  cover: ../images/covers/172-brmc.jpg
+  cover: ../images/covers/172-brmc.webp
   released_on: 2001-04-03
   spotify: 5kNEFtQmqLrPx0XA8Sq0N5
   year: 2001
@@ -673,7 +673,7 @@
   title: Sandinista!
   hosted_by: matt
   played_on: 2025-04-17
-  cover: ../images/covers/170-sandinista.jpg
+  cover: ../images/covers/170-sandinista.webp
   released_on: 1980-12-12
   spotify: 2UxN3UKyS3Z5r0Sra8A5RF
   year: 1980
@@ -792,7 +792,7 @@
   title: Tourism
   hosted_by: andrew
   played_on: 2025-03-14
-  cover: ../images/covers/169-tourism.jpg
+  cover: ../images/covers/169-tourism.webp
   released_on: 1992-08-28
   spotify: 0bUxMVGLeC3putBWeTE6wr
   year: 1992
@@ -851,7 +851,7 @@
   title: A Tonic For The Troops
   hosted_by: ed
   played_on: 2025-02-14
-  cover: ../images/covers/168-a-tonic-for-the-troops.jpg
+  cover: ../images/covers/168-a-tonic-for-the-troops.webp
   released_on: 1978-06-01
   spotify: 2meIZ6h6faEEjkN9vw9HnV
   year: 1978
@@ -894,7 +894,7 @@
   title: The Crossing
   hosted_by: john
   played_on: 2025-01-17
-  cover: ../images/covers/167-the-crossing.jpg
+  cover: ../images/covers/167-the-crossing.webp
   spotify: 1E4YQWCiaIuRG7ih78thrE
   released_on: 1983-07-29
   year: 1983
@@ -935,7 +935,7 @@
   title: Moondance
   hosted_by: wendy
   played_on: 2024-12-12
-  cover: ../images/covers/166-moondance.jpg
+  cover: ../images/covers/166-moondance.webp
   spotify: 5PfnCqRbdfIDMb1x3MPQam
   released_on: 1970-01-27
   year: 1970
@@ -976,7 +976,7 @@
   title: Racecar Is Racecar Backwards
   hosted_by: mat
   played_on: 2024-11-22
-  cover: ../images/covers/165-racecar-is-racecar-backwards.jpg
+  cover: ../images/covers/165-racecar-is-racecar-backwards.webp
   spotify: 42atKxaK73Esz9z0l7Fkoq
   released_on: 2004-06-21
   year: 2004
@@ -1039,7 +1039,7 @@
   title: Whatever People Say I Am, That's What I'm Not
   hosted_by: nick
   played_on: 2024-10-18
-  cover: ../images/covers/164-whatever-people-say-i-am-thats-what-im-not.jpeg
+  cover: ../images/covers/164-whatever-people-say-i-am-thats-what-im-not.webp
   spotify: 50Zz8CkIhATKUlQMbHO3k1
   released_on: 2006-01-23
   year: 2006
@@ -1160,7 +1160,7 @@
   title: Word Gets Around
   hosted_by: matt
   played_on: 2024-09-05
-  cover: ../images/covers/162-word-gets-around.jpg
+  cover: ../images/covers/162-word-gets-around.webp
   spotify: 6aQ9eJe8CzynjbiD0oXIvx
   year: 1997
   released_on: '1997-08-25'
@@ -1207,7 +1207,7 @@
   title: Ed's Not Dead----Hamell Comes Alive! (live)
   hosted_by: andrew
   played_on: 2024-07-09
-  cover: ../images/covers/161-eds-not-dead.jpg
+  cover: ../images/covers/161-eds-not-dead.webp
   released_on: '2001-01-01'
   spotify: 3fxGEiYfEzSzSjk6Un2IIA
   year: 2001
@@ -1266,7 +1266,7 @@
   title: Welcome to England
   hosted_by: ed
   played_on: 2024-06-28
-  cover: ../images/covers/160-welcome-to-england.jpg
+  cover: ../images/covers/160-welcome-to-england.webp
   released_on: '1992-01-01'
   year: 1992
   tracks:
@@ -1306,7 +1306,7 @@
   title: Heaven or Las Vegas
   hosted_by: john
   played_on: 2024-05-24
-  cover: ../images/covers/159-heaven-or-las-vegas.png
+  cover: ../images/covers/159-heaven-or-las-vegas.webp
   spotify: 5lEphbceIgaK1XxWeSrC9E
   year: 1990
   released_on: '1990-09-17'
@@ -1347,7 +1347,7 @@
   title: Pearl
   hosted_by: wendy
   played_on: 2024-04-25
-  cover: ../images/covers/158-pearl.jpg
+  cover: ../images/covers/158-pearl.webp
   spotify: 5tvjoCIq5gSmcR62Upj20r
   year: 1971
   released_on: '1971-01-11'
@@ -1388,7 +1388,7 @@
   title: California
   hosted_by: nick
   played_on: 2024-03-29
-  cover: ../images/covers/157-california.jpg
+  cover: ../images/covers/157-california.webp
   year: 1988
   released_on: '1988-11-10'
   tracks:
@@ -1443,7 +1443,7 @@
   title: Superunknown
   hosted_by: mat
   played_on: 2024-02-16
-  cover: ../images/covers/156-superunknown.jpg
+  cover: ../images/covers/156-superunknown.webp
   spotify: 4K8bxkPDa5HENw0TK7WxJh
   year: 1994
   released_on: '1994-03-08'
@@ -1502,7 +1502,7 @@
   title: POD
   hosted_by: matt
   played_on: 2024-01-11
-  cover: ../images/covers/155-pod.jpg
+  cover: ../images/covers/155-pod.webp
   spotify: 0xx56m5AMEIMZlSjdJwxf5
   year: 1990
   released_on: '1990-05-29'
@@ -1549,7 +1549,7 @@
   title: The Works
   hosted_by: andrew
   played_on: 2023-12-04
-  cover: ../images/covers/154-the-works.jpg
+  cover: ../images/covers/154-the-works.webp
   released_on: '1984-02-27'
   spotify: 5RS9xkMuDmeVISqGDBmnSa
   label: EMI
@@ -1594,7 +1594,7 @@
   artist: Rush
   hosted_by: ed
   played_on: 2023-11-16
-  cover: ../images/covers/153-2112.jpg
+  cover: ../images/covers/153-2112.webp
   released_on: '1976-04-01'
   spotify: 5Bj8qP3GhOCmsV1gUIvjCI
   year: 1976
@@ -1623,7 +1623,7 @@
   artist: Simple Minds
   hosted_by: john
   played_on: 2023-10-20
-  cover: ../images/covers/152-new-gold-dream.jpg
+  cover: ../images/covers/152-new-gold-dream.webp
   released_on: '1982-09-13'
   spotify: 6dn2O3un8SV0QZ421jDdEj
   year: 1982
@@ -1661,7 +1661,7 @@
   artist: Love
   hosted_by: wendy
   played_on: 2023-09-12
-  cover: ../images/covers/151-forever-changes.jpg
+  cover: ../images/covers/151-forever-changes.webp
   released_on: '1967-11-01'
   tags:
   - psychedelic rock
@@ -1710,7 +1710,7 @@
   artist: I Am Kloot
   hosted_by: nick
   played_on: 2023-08-07
-  cover: ../images/covers/150-sky-at-night.jpg
+  cover: ../images/covers/150-sky-at-night.webp
   released_on: '2010-07-05'
   tags:
   - indie rock
@@ -1811,7 +1811,7 @@
   artist: The Housemartins
   hosted_by: matt
   played_on: 2023-06-23
-  cover: ../images/covers/148-london-0-hull-4.jpg
+  cover: ../images/covers/148-london-0-hull-4.webp
   released_on: '1986-06-15'
   tags:
   - pop
@@ -1865,7 +1865,7 @@
   artist: Patty Griffin
   hosted_by: andrew
   played_on: 2023-05-04
-  cover: ../images/covers/147-living-with-ghosts.jpg
+  cover: ../images/covers/147-living-with-ghosts.webp
   released_on: '1996-05-21'
   tags:
   - contemporary folk
@@ -1958,7 +1958,7 @@
   artist: The Cult
   hosted_by: john
   played_on: 2023-03-10
-  cover: ../images/covers/145-love.jpg
+  cover: ../images/covers/145-love.webp
   released_on: '1985-10-18'
   tags:
   - goth
@@ -2009,7 +2009,7 @@
   artist: Lou Reed
   hosted_by: wendy
   played_on: 2023-02-03
-  cover: ../images/covers/144-transformer.jpg
+  cover: ../images/covers/144-transformer.webp
   released_on: '1972-11-08'
   tags:
   - glam rock
@@ -2059,7 +2059,7 @@
   artist: The Charlatans
   hosted_by: nick
   played_on: 2023-01-26
-  cover: ../images/covers/143-some-friendly.jpg
+  cover: ../images/covers/143-some-friendly.webp
   released_on: '1990-10-08'
   tags:
   - acid-pop
@@ -2110,7 +2110,7 @@
   artist: Emma Ruth Rundle
   hosted_by: mat
   played_on: 2023-01-13
-  cover: ../images/covers/142-some-heavy-ocean.jpg
+  cover: ../images/covers/142-some-heavy-ocean.webp
   released_on: '2014-05-20'
   tags:
   - folk
@@ -2157,7 +2157,7 @@
   artist: The White Stripes
   hosted_by: matt
   played_on: 2022-11-04
-  cover: ../images/covers/141-white-blood-cells.jpg
+  cover: ../images/covers/141-white-blood-cells.webp
   released_on: '2001-07-03'
   spotify: 6Xvc1TfpVEhDeHhmTQEtp0
   year: 2014
@@ -2216,7 +2216,7 @@
   artist: Katie Von Schleicher
   hosted_by: andrew
   played_on: 2022-10-28
-  cover: ../images/covers/140-consummation.jpg
+  cover: ../images/covers/140-consummation.webp
   released_on: '2020-05-22'
   spotify: 0oOcfX2LbW26HL4yR2JAQ2
   year: 2020
@@ -2266,7 +2266,7 @@
   artist: Morcheeba
   hosted_by: dan
   played_on: 2022-09-22
-  cover: ../images/covers/139-big-calm.jpg
+  cover: ../images/covers/139-big-calm.webp
   # cover: https://en.m.wikipedia.org/wiki/Big_Calm#/media/File%3AMorcheeba_-_Big_Calm.jpg
   released_on: '1998-03-16'
   spotify: 1ILnMWNKUXzcXug4Tq2JRP
@@ -2350,7 +2350,7 @@
   artist: Slowdive
   hosted_by: john
   played_on: 2022-07-22
-  cover: ../images/covers/137-souvlaki.jpg
+  cover: ../images/covers/137-souvlaki.webp
   released_on: '1993-06-01'
   tags:
   - shoegaze
@@ -2397,7 +2397,7 @@
   artist: Radiohead
   hosted_by: nick
   played_on: 2022-06-23
-  cover: ../images/covers/136-a-moon-shaped-pool.jpg
+  cover: ../images/covers/136-a-moon-shaped-pool.webp
   released_on: '2016-05-08'
   tags:
   - art rock
@@ -2450,7 +2450,7 @@
   artist: Erasure
   hosted_by: wendy
   played_on: 2022-05-05
-  cover: ../images/covers/135-the-innocents.png
+  cover: ../images/covers/135-the-innocents.webp
   released_on: '1988-04-10'
   tags:
   - synthpop
@@ -2499,7 +2499,7 @@
   artist: Fields
   hosted_by: mat
   played_on: 2022-04-22
-  cover: ../images/covers/134-everything-last-winter.jpg
+  cover: ../images/covers/134-everything-last-winter.webp
   released_on: '2007-04-02'
   tags:
   - indie
@@ -2543,7 +2543,7 @@
   artist: GZA/Genius
   hosted_by: matt
   played_on: 2022-03-24
-  cover: ../images/covers/133-liquid-swords-instrumentals.jpg
+  cover: ../images/covers/133-liquid-swords-instrumentals.webp
   released_on: '1995-01-01'
   year: 1995
   tracks:
@@ -2586,7 +2586,7 @@
   artist: The Black Crowes
   hosted_by: andrew
   played_on: 2022-02-25
-  cover: ../images/covers/132-the-southern-harmony-and-musical-companion.jpg
+  cover: ../images/covers/132-the-southern-harmony-and-musical-companion.webp
   released_on: '1992-05-12'
   tags:
   - southern rock
@@ -2632,7 +2632,7 @@
   artist: The Black Keys
   hosted_by: dan
   played_on: 2022-01-27
-  cover: ../images/covers/131-el-camino.png
+  cover: ../images/covers/131-el-camino.webp
   released_on: '2011-12-06'
   tags:
   - blues rock
@@ -2681,7 +2681,7 @@
   artist: Steely Dan
   hosted_by: nick
   played_on: 2021-12-02
-  cover: ../images/covers/130-cant-buy-a-thrill.png
+  cover: ../images/covers/130-cant-buy-a-thrill.webp
   released_on: '1973-01-01'
   tags:
   - steely dan
@@ -2727,7 +2727,7 @@
   artist: Green Day
   hosted_by: john
   played_on: 2021-11-12
-  cover: ../images/covers/129-american-idiot.jpg
+  cover: ../images/covers/129-american-idiot.webp
   released_on: '2004-09-21'
   spotify: 5dN7F9DV0Qg1XRdIgW8rke
   year: 2004
@@ -2765,7 +2765,7 @@
   artist: U2
   hosted_by: ed
   played_on: 2021-10-29
-  cover: ../images/covers/128-achtung-baby.png
+  cover: ../images/covers/128-achtung-baby.webp
   released_on: '1991-11-18'
   spotify: 5n52kyQKeUZs5ObZJejLQd
   year: 1991
@@ -2812,7 +2812,7 @@
   artist: Joe Jackson
   hosted_by: andrew
   played_on: 2021-09-16
-  cover: ../images/covers/127-im-the-man.jpg
+  cover: ../images/covers/127-im-the-man.webp
   released_on: '1979-10-05'
   spotify: 2yfioluqC2edPkwFlW1J15
   year: 1979
@@ -2853,7 +2853,7 @@
   artist: And So I Watch You From Afar
   hosted_by: mat
   played_on: 2021-08-10
-  cover: ../images/covers/126-gangs.jpg
+  cover: ../images/covers/126-gangs.webp
   released_on: '2011-04-29'
   spotify: 2wuIBhJ0Wuy4JQfuzV9Ema
   year: 2011
@@ -2888,7 +2888,7 @@
   artist: Young Knives
   hosted_by: matt
   played_on: 2021-07-15
-  cover: ../images/covers/125-voices-of-animals-and-men.jpg
+  cover: ../images/covers/125-voices-of-animals-and-men.webp
   released_on: '2006-08-21'
   spotify: 4l0WkgnCxxK3NuypGRGUJy
   year: 2006
@@ -2941,7 +2941,7 @@
   artist: Carole King
   hosted_by: wendy
   played_on: 2021-06-11
-  cover: ../images/covers/124-tapestry.png
+  cover: ../images/covers/124-tapestry.webp
   released_on: '1971-02-10'
   spotify: 12n11cgnpjXKLeqrnIERoS
   year: 1971
@@ -2988,7 +2988,7 @@
   artist: Talking Heads
   hosted_by: dan
   played_on: 2021-05-14
-  cover: ../images/covers/123-little-creatures.jpg
+  cover: ../images/covers/123-little-creatures.webp
   released_on: '1985-06-10'
   spotify: 5Dja2ASXd7MOM628iwYdtA
   year: 1985
@@ -3026,7 +3026,7 @@
   artist: Counting Crows
   hosted_by: ed
   played_on: 2021-04-23
-  cover: ../images/covers/122-august-and-everything-after.jpg
+  cover: ../images/covers/122-august-and-everything-after.webp
   released_on: '1993-09-14'
   spotify: 4nKfZbCALT9H9LfedtDwnZ
   year: 1993
@@ -3070,7 +3070,7 @@
   artist: The Smashing Pumpkins
   hosted_by: john
   played_on: 2021-03-19
-  cover: ../images/covers/121-siamese-dream.png
+  cover: ../images/covers/121-siamese-dream.webp
   released_on: '1993-07-27'
   spotify: 2Qs2SpclDToB087fLolhCN
   year: 1993
@@ -3120,7 +3120,7 @@
   artist: Supergrass
   hosted_by: nick
   played_on: 2021-02-19
-  cover: ../images/covers/120-i-should-coco.jpg
+  cover: ../images/covers/120-i-should-coco.webp
   released_on: '1995-05-15'
   spotify: 3YfIjaJEWqiSbKPguS9Bxd
   year: 1995
@@ -3170,7 +3170,7 @@
   artist: Mansun
   hosted_by: andrew
   played_on: 2020-12-18
-  cover: ../images/covers/119-six.jpg
+  cover: ../images/covers/119-six.webp
   released_on: '1998-09-07'
   spotify: 4duqcj0sawOX7CbJdUqtzs
   year: 1998
@@ -3220,7 +3220,7 @@
   artist: Twin Shadow
   hosted_by: mat
   played_on: 2020-11-18
-  cover: ../images/covers/118-confess.jpg
+  cover: ../images/covers/118-confess.webp
   released_on: '2012-07-10'
   spotify: 0owWoisr4gnmsZxVGG5dkk
   year: 2012
@@ -3261,7 +3261,7 @@
   artist: Danger Mouse
   hosted_by: matt
   played_on: 2020-10-22
-  cover: ../images/covers/117-the-grey-album.jpg
+  cover: ../images/covers/117-the-grey-album.webp
   released_on: '2004-02-01'
   year: 2004
   tracks:
@@ -3307,7 +3307,7 @@
   artist: Kate Bush
   hosted_by: wendy
   played_on: 2020-09-25
-  cover: ../images/covers/116-the-kick-inside.png
+  cover: ../images/covers/116-the-kick-inside.webp
   released_on: '1978-02-17'
   spotify: 5NKTuBLCYhN0OwqFiGdXd1
   year: 1978
@@ -3357,7 +3357,7 @@
   artist: Broken Bells
   hosted_by: dan
   played_on: 2020-08-27
-  cover: ../images/covers/115-after-the-disco.png
+  cover: ../images/covers/115-after-the-disco.webp
   released_on: '2014-01-31'
   spotify: 0cjMGmZKB9ZWzcb0VcASpf
   year: 2014
@@ -3401,7 +3401,7 @@
   artist: Idlewild
   hosted_by: ed
   played_on: 2020-07-17
-  cover: ../images/covers/114-100-broken-windows.jpg
+  cover: ../images/covers/114-100-broken-windows.webp
   released_on: '2000-04-10'
   links:
   - label: Wikipedia
@@ -3453,7 +3453,7 @@
   artist: Chapterhouse
   hosted_by: john
   played_on: 2020-06-25
-  cover: ../images/covers/113-whirlpool.jpg
+  cover: ../images/covers/113-whirlpool.webp
   released_on: '1991-04-29'
   spotify: 5Sc59oKieHPFvruoxBgmSp
   year: 1991
@@ -3491,7 +3491,7 @@
   artist: This Is The Kit
   hosted_by: nick
   played_on: 2020-05-28
-  cover: ../images/covers/112-moonshine-freeze.jpg
+  cover: ../images/covers/112-moonshine-freeze.webp
   released_on: '2017-07-07'
   spotify: 5RYg5ZR0qfRebkseuqlGJj
   year: 2017
@@ -3535,7 +3535,7 @@
   artist: Marika Hackman
   hosted_by: andrew
   played_on: 2020-04-30
-  cover: ../images/covers/111-im-not-your-man.png
+  cover: ../images/covers/111-im-not-your-man.webp
   released_on: '2017-06-02'
   spotify: 58IxxVGqidZ8sLWNKeknlH
   year: 2017
@@ -3589,7 +3589,7 @@
   - synth-pop
   - ambient
   - shoegaze
-  cover: ../images/covers/110-hurry-up-were-dreaming.png
+  cover: ../images/covers/110-hurry-up-were-dreaming.webp
   released_on: '2011-10-18'
   year: 2011
   spotify: 6EB14IXV5oyOiItGBv7mtG
@@ -3669,7 +3669,7 @@
   artist: Asian Dub Foundation
   hosted_by: matt
   played_on: 2020-03-20
-  cover: ../images/covers/109-rafis-revenge.jpg
+  cover: ../images/covers/109-rafis-revenge.webp
   released_on: '1998-11-03'
   spotify: 6bI22G1Vu3g3Qji8Xs8pjx
   label: London Music Stream
@@ -3729,7 +3729,7 @@
   artist: Mary Coughlan
   hosted_by: wendy
   played_on: 2020-02-27
-  cover: ../images/covers/108-tired-and-emotional.jpg
+  cover: ../images/covers/108-tired-and-emotional.webp
   released_on: '1985-09-15'
   spotify: 5TwR0zubZXoG0V7nENeh3s
   label: Warner Music Group - X5 Music Group
@@ -3771,7 +3771,7 @@
   artist: Goldfrapp
   hosted_by: dan
   played_on: 2020-01-24
-  cover: ../images/covers/107-supernature.png
+  cover: ../images/covers/107-supernature.webp
   released_on: '2005-08-17'
   spotify: 3vtZKHDljhjJORS14a4qKx
   year: 2005
@@ -3818,7 +3818,7 @@
   artist: Ben Folds Five
   hosted_by: ed
   played_on: 2019-12-19
-  cover: ../images/covers/106-ben-folds-five.png
+  cover: ../images/covers/106-ben-folds-five.webp
   released_on: '1995-08-08'
   spotify: 2zNa1aZ0VaGfuiNqDbrQET
   year: 1995
@@ -3865,7 +3865,7 @@
   artist: Eurythmics
   hosted_by: john
   played_on: 2019-11-01
-  cover: ../images/covers/105-sweet-dreams-are-made-of-this.png
+  cover: ../images/covers/105-sweet-dreams-are-made-of-this.webp
   released_on: '1983-01-04'
   spotify: 5jNDWA19BJbE24x1UUJGRY
   label: RCA Records Label
@@ -3907,7 +3907,7 @@
   artist: Elbow
   hosted_by: nick
   played_on: 2019-10-10
-  cover: ../images/covers/104-the-seldom-seen-kid.png
+  cover: ../images/covers/104-the-seldom-seen-kid.webp
   released_on: '2008-03-17'
   spotify: 25KJ3Be6nm3mvFOOKZU2TE
   year: 2008
@@ -3951,7 +3951,7 @@
   artist: Grant Lee Buffalo
   hosted_by: andrew
   played_on: 2019-09-18
-  cover: ../images/covers/103-mighty-joe-moon.jpg
+  cover: ../images/covers/103-mighty-joe-moon.webp
   released_on: '1994-09-20'
   tags:
   - alternative rock
@@ -4004,7 +4004,7 @@
   artist: Fever Ray
   hosted_by: mat
   played_on: 2019-09-06
-  cover: ../images/covers/102-fever-ray.png
+  cover: ../images/covers/102-fever-ray.webp
   released_on: '2009-01-12'
   label: Rabid
   spotify: 0XwEfJMejqTpgalJwtp1CM
@@ -4046,7 +4046,7 @@
   artist: J.J. Cale
   hosted_by: wendy
   played_on: 2019-07-04
-  cover: ../images/covers/101-naturally.jpg
+  cover: ../images/covers/101-naturally.webp
   released_on: '1971-10-25'
   spotify: 3cpNHI7xhNIosF9WjSk8Zh
   year: 1972
@@ -4093,7 +4093,7 @@
   artist: Saint Etienne
   hosted_by: matt
   played_on: 2019-06-07
-  cover: ../images/covers/100-tiger-bay.png
+  cover: ../images/covers/100-tiger-bay.webp
   released_on: '1994-02-28'
   label: Heavenly Recordings
   spotify: 6CisCNwbSLFprahnoN6xKE
@@ -4135,7 +4135,7 @@
   artist: R.E.M.
   hosted_by: dan
   played_on: 2019-05-09
-  cover: ../images/covers/99-green.png
+  cover: ../images/covers/99-green.webp
   released_on: '1988-11-08'
   label: Warner
   spotify: 7rfKAiPs9ToZP9zEJDBqBH
@@ -4180,7 +4180,7 @@
   artist: Siouxsie And The Banshees
   hosted_by: ed
   played_on: 2019-04-26
-  cover: ../images/covers/98-juju.png
+  cover: ../images/covers/98-juju.webp
   released_on: '1981-06-06'
   label: UMC (Universal Music Catalogue)
   spotify: 5OEum65e1HMGX51Ifu51Wb
@@ -4219,7 +4219,7 @@
   artist: Metallica
   hosted_by: john
   played_on: 2019-03-15
-  cover: ../images/covers/97-ride-the-lightning.png
+  cover: ../images/covers/97-ride-the-lightning.webp
   released_on: '1984-07-27'
   label: Megaforce
   spotify: 05DePtm7oQMdL3Uzw2Jmsc
@@ -4255,7 +4255,7 @@
   artist: Joni Mitchell
   hosted_by: nick
   played_on: 2019-02-15
-  cover: ../images/covers/96-blue.jpg
+  cover: ../images/covers/96-blue.webp
   released_on: '1971-06-22'
   spotify: 1vz94WpXDVYIEGja8cjFNa
   year: 1971
@@ -4296,7 +4296,7 @@
   artist: Small Faces
   hosted_by: andrew
   played_on: 2019-01-11
-  cover: ../images/covers/95-ogdens-nut-gone-flake.jpg
+  cover: ../images/covers/95-ogdens-nut-gone-flake.webp
   released_on: '1968-05-24'
   spotify: 7HpNZHNfECoHoFHaB5tnSk
   year: 1968
@@ -4343,7 +4343,7 @@
   artist: Tame Impala
   hosted_by: mat
   played_on: 2019-01-04
-  cover: ../images/covers/94-currents.jpg
+  cover: ../images/covers/94-currents.webp
   released_on: '2015-07-17'
   spotify: 79dL7FLiJFOO0EoehUHQBv
   year: 2015
@@ -4393,7 +4393,7 @@
   artist: Blondie
   hosted_by: wendy
   played_on: 2018-11-23
-  cover: ../images/covers/93-parallel-lines.png
+  cover: ../images/covers/93-parallel-lines.webp
   spotify: 4M6s2jbhKWEcOdXZ8WiHts
   year: 1978
   released_on: '1978-09-23'
@@ -4440,7 +4440,7 @@
   artist: Bob Dylan
   hosted_by: matt
   played_on: 2018-10-12
-  cover: ../images/covers/92-the-times-they-are-a-changin.png
+  cover: ../images/covers/92-the-times-they-are-a-changin.webp
   label: Columbia
   spotify: 7DZeLXvr9eTVpyI1OlqtcS
   year: 1964
@@ -4526,7 +4526,7 @@
   artist: Talking Heads
   hosted_by: ed
   played_on: 2018-08-30
-  cover: ../images/covers/90-speaking-in-tongues.png
+  cover: ../images/covers/90-speaking-in-tongues.webp
   spotify: 78MM8HrabEGPLVWaJkM2t1
   year: 1983
   released_on: '1983-05-31'
@@ -4564,7 +4564,7 @@
   artist: Sonic Youth
   hosted_by: john
   played_on: 2018-07-06
-  cover: ../images/covers/89-daydream-nation.png
+  cover: ../images/covers/89-daydream-nation.webp
   spotify: 3BYlBcND6PeKoW6ZODjZO3
   year: 1988
   released_on: '1988-10-11'
@@ -4617,7 +4617,7 @@
   artist: T. Rex
   hosted_by: dan
   played_on: 2018-06-22
-  cover: ../images/covers/88-electric-warrior.png
+  cover: ../images/covers/88-electric-warrior.webp
   spotify: 2wnq5e000z2hT7qS2F8jZ5
   year: 1971
   released_on: '1971-09-24'
@@ -4673,7 +4673,7 @@
   artist: Gemma Hayes
   hosted_by: andrew
   played_on: 2018-05-24
-  cover: ../images/covers/87-night-on-my-side.jpg
+  cover: ../images/covers/87-night-on-my-side.webp
   spotify: 5a3Su4ylOfqGhKPXYYFn9i
   year: 2002
   released_on: '2002-01-01'
@@ -4723,7 +4723,7 @@
   artist: The La's
   hosted_by: mat
   played_on: 2018-04-02
-  cover: ../images/covers/86-the-las.png
+  cover: ../images/covers/86-the-las.webp
   released_on: '1990-10-01'
   spotify: 1djwiQ802xeU8Q45jv1b0x
   year: 1990
@@ -4770,7 +4770,7 @@
   artist: The Rolling Stones
   hosted_by: wendy
   played_on: 2018-03-23
-  cover: ../images/covers/85-let-it-bleed.jpg
+  cover: ../images/covers/85-let-it-bleed.webp
   spotify: 4l4u9e9jSbotSXNjYfOugy
   year: 1969
   released_on: '1969-12-05'
@@ -4808,7 +4808,7 @@
   artist: Saint Etienne
   hosted_by: matt
   played_on: 2018-02-02
-  cover: ../images/covers/84-so-tough.png
+  cover: ../images/covers/84-so-tough.webp
   spotify: 0jthc9ezftxi0w1jyhZfgi
   year: 1993
   released_on: '1993-02-22'
@@ -4864,7 +4864,7 @@
   artist: Nick Cave & The Bad Seeds
   hosted_by: nick
   played_on: 2018-01-12
-  cover: ../images/covers/83-let-love-in.png
+  cover: ../images/covers/83-let-love-in.webp
   spotify: 3OlT3zr0bvzYYg2Dwn6Fkx
   year: 1994
   released_on: '1994-04-18'
@@ -4905,7 +4905,7 @@
   artist: Jethro Tull
   hosted_by: ed
   played_on: 2017-12-13
-  cover: ../images/covers/82-aqualung.png
+  cover: ../images/covers/82-aqualung.webp
   spotify: 0NGM3Ftwjw0dLNpAowmz3x
   year: 1971
   released_on: '1971-03-19'
@@ -4955,7 +4955,7 @@
   artist: Lush
   hosted_by: john
   played_on: 2017-12-01
-  cover: ../images/covers/81-split.png
+  cover: ../images/covers/81-split.webp
   spotify: 7GENDDN5PnnAF9e8NbuMIT
   year: 1996
   released_on: '1996-03-18'
@@ -5002,7 +5002,7 @@
   artist: The Cure
   hosted_by: dan
   played_on: 2017-10-31
-  cover: ../images/covers/80-disintegration.jpg
+  cover: ../images/covers/80-disintegration.webp
   spotify: 6DZNOsLXIU2zOQfQDwDpIS
   year: 1989
   released_on: '1989-05-02'
@@ -5049,7 +5049,7 @@
   artist: Gene Clark
   hosted_by: andrew
   played_on: 2017-09-28
-  cover: ../images/covers/79-no-other.jpg
+  cover: ../images/covers/79-no-other.webp
   released_on: '1974-09-01'
   spotify: 0bHiuso3WXpchgSlfX48uY
   year: 1974
@@ -5091,7 +5091,7 @@
   artist: Neil Finn
   hosted_by: mat
   played_on: 2017-08-10
-  cover: ../images/covers/78-try-whistling-this.jpg
+  cover: ../images/covers/78-try-whistling-this.webp
   spotify: 5NtpuuU1AAUEub3CIpPFYQ
   year: 1998
   released_on: '1998-06-15'
@@ -5141,7 +5141,7 @@
   artist: The Pretenders
   hosted_by: wendy
   played_on: 2017-07-07
-  cover: ../images/covers/77-the-pretenders.jpg
+  cover: ../images/covers/77-the-pretenders.webp
   spotify: 28Eu96aUziJU9iemBomWRs
   year: 1980
   released_on: '1980-01-11'
@@ -5188,7 +5188,7 @@
   artist: Cat Stevens
   hosted_by: matt
   played_on: 2017-06-08
-  cover: ../images/covers/76-tea-for-the-tillerman.png
+  cover: ../images/covers/76-tea-for-the-tillerman.webp
   spotify: 44VxbAytHpVi3Rq8hRhild
   year: 1970
   released_on: '1970-11-23'
@@ -5232,7 +5232,7 @@
   artist: Elvis Costello & The Attractions
   hosted_by: nick
   played_on: 2017-05-19
-  cover: ../images/covers/75-blood--chocolate.png
+  cover: ../images/covers/75-blood--chocolate.webp
   released_on: '1986-09-15'
   spotify: 6T5rtCxx8dI4C0VckeB85M
   year: 1986
@@ -5276,7 +5276,7 @@
   artist: The Presidents Of The United States Of America
   hosted_by: ed
   played_on: 2017-04-27
-  cover: ../images/covers/74-the-presidents-of-the-united-states-of-america.jpg
+  cover: ../images/covers/74-the-presidents-of-the-united-states-of-america.webp
   spotify: 7qh8188T5LB7bdCBlk6SO1
   year: 1995
   released_on: '1995-01-01'
@@ -5326,7 +5326,7 @@
   artist: Public Service Broadcasting
   hosted_by: john
   played_on: 2017-03-30
-  cover: ../images/covers/73-inform---educate---entertain.png
+  cover: ../images/covers/73-inform---educate---entertain.webp
   spotify: 1aSU7tVnGuKquY8yKCw1jm
   year: 2013
   released_on: '2013-05-06'
@@ -5370,7 +5370,7 @@
   artist: Massive Attack
   hosted_by: dan
   played_on: 2017-02-24
-  cover: ../images/covers/72-mezzanine.jpg
+  cover: ../images/covers/72-mezzanine.webp
   spotify: 49MNmJhZQewjt06rpwp6QR
   year: 1998
   released_on: '1998-01-01'
@@ -5414,7 +5414,7 @@
   artist: Elton John
   hosted_by: andrew
   played_on: 2017-01-27
-  cover: ../images/covers/71-captain-fantastic-and-the-brown-dirt-cowboy.png
+  cover: ../images/covers/71-captain-fantastic-and-the-brown-dirt-cowboy.webp
   spotify: 4UcpKa4yD9AA3iEHI8MFSF
   year: 1975
   released_on: '1975-05-19'
@@ -5464,7 +5464,7 @@
   artist: Deftones
   hosted_by: mat
   played_on: 2016-12-12
-  cover: ../images/covers/70-white-pony.jpg
+  cover: ../images/covers/70-white-pony.webp
   released_on: '2000-06-20'
   tags:
   - alternative metal
@@ -5516,7 +5516,7 @@
   artist: Leonard Cohen
   hosted_by: wendy
   played_on: 2016-11-18
-  cover: ../images/covers/69-im-your-man.jpg
+  cover: ../images/covers/69-im-your-man.webp
   spotify: 3gUw30X6A7WEGcRdv1nFr9
   year: 1988
   released_on: '1988-02-02'
@@ -5551,7 +5551,7 @@
   artist: Hop Along
   hosted_by: matt
   played_on: 2016-11-03
-  cover: ../images/covers/68-get-disowned.jpg
+  cover: ../images/covers/68-get-disowned.webp
   spotify: 0M21gt5nGY8lqVmCxQxEiL
   year: 2012
   released_on: '2012-05-05'
@@ -5592,7 +5592,7 @@
   artist: John Grant
   hosted_by: nick
   played_on: 2016-09-16
-  cover: ../images/covers/67-queen-of-denmark.png
+  cover: ../images/covers/67-queen-of-denmark.webp
   spotify: 4odAbJvNXwZZUp20xWmZQp
   year: 2010
   released_on: '2010-04-19'
@@ -5651,7 +5651,7 @@
   artist: Longpigs
   hosted_by: ed
   played_on: 2016-08-31
-  cover: ../images/covers/66-the-sun-is-often-out.png
+  cover: ../images/covers/66-the-sun-is-often-out.webp
   spotify: 1QQKv2Y9uONbj8Dw6GUMB6
   year: 1996
   released_on: '1996-01-01'
@@ -5698,7 +5698,7 @@
   artist: My Bloody Valentine
   hosted_by: john
   played_on: 2016-07-14
-  cover: ../images/covers/65-loveless.jpg
+  cover: ../images/covers/65-loveless.webp
   spotify: 3USQKOw0se5pBNEndu82Rb
   year: 1991
   released_on: '1991-11-04'
@@ -5742,7 +5742,7 @@
   artist: Ryan Adams
   hosted_by: andrew
   played_on: 2016-06-24
-  cover: ../images/covers/64-heartbreaker.png
+  cover: ../images/covers/64-heartbreaker.webp
   spotify: 7hmZCaBzp6mVrelxW6Ckrn
   year: 2000
   released_on: '2000-09-05'
@@ -5798,7 +5798,7 @@
   artist: Fleetwood Mac
   hosted_by: dan
   played_on: 2016-05-19
-  cover: ../images/covers/63-rumours.png
+  cover: ../images/covers/63-rumours.webp
   spotify: 1bt6q2SruMsBtcerNVtpZB
   year: 1977
   released_on: '1977-02-04'
@@ -5842,7 +5842,7 @@
   artist: K.D. Lang
   hosted_by: wendy
   played_on: 2016-04-28
-  cover: ../images/covers/62-ingnue.png
+  cover: ../images/covers/62-ingnue.webp
   spotify: 1XHEQqyatYvfK5cEJfkPeK
   year: 1992
   released_on: '1992-03-17'
@@ -5883,7 +5883,7 @@
   artist: The Verve
   hosted_by: mat
   played_on: 2016-03-14
-  cover: ../images/covers/61-a-storm-in-heaven.jpg
+  cover: ../images/covers/61-a-storm-in-heaven.webp
   spotify: 67PdmKLom1PcFJavDAaEtE
   year: 1993
   released_on: '1993-06-21'
@@ -5924,7 +5924,7 @@
   artist: The Jesus and Mary Chain
   hosted_by: matt
   played_on: 2016-02-26
-  cover: ../images/covers/60-psychocandy.jpg
+  cover: ../images/covers/60-psychocandy.webp
   spotify: 2t1hVEwp82QebO7lq21Vto
   year: 1985
   released_on: '1985-11-18'
@@ -5977,7 +5977,7 @@
   artist: Pink Floyd
   hosted_by: nick
   played_on: 2016-01-29
-  cover: ../images/covers/59-wish-you-were-here.png
+  cover: ../images/covers/59-wish-you-were-here.webp
   spotify: 6uvBKDGlJAYLH5Vy6RQVsc
   year: 1975
   released_on: '1975-09-12'
@@ -6003,7 +6003,7 @@
   artist: Happy Mondays
   hosted_by: john
   played_on: 2015-12-09
-  cover: ../images/covers/58-bummed.png
+  cover: ../images/covers/58-bummed.webp
   spotify: 6e6DI3muL90IC1LESBo7wK
   year: 2007
   released_on: '2007-01-01'
@@ -6044,7 +6044,7 @@
   artist: Seal
   hosted_by: andrew
   played_on: 2015-11-19
-  cover: ../images/covers/57-seal.png
+  cover: ../images/covers/57-seal.webp
   spotify: 1mSECpFqHRW6leG4idqTE1
   year: 1994
   released_on: '1994-05-31'
@@ -6088,7 +6088,7 @@
   artist: Patti Smith
   hosted_by: wendy
   played_on: 2015-11-05
-  cover: ../images/covers/56-horses.png
+  cover: ../images/covers/56-horses.webp
   released_on: '1975-11-10'
   spotify: 7xg7u99lilTCPbaRfnYuy6
   year: 1975
@@ -6123,7 +6123,7 @@
   artist: Lamb
   hosted_by: mat
   played_on: 2015-09-24
-  cover: ../images/covers/55-lamb.jpg
+  cover: ../images/covers/55-lamb.webp
   spotify: 5pMiACEneeuFtoFR9tEzOO
   year: 1996
   released_on: '1996-01-01'
@@ -6164,7 +6164,7 @@
   artist: Belle & Sebastian
   hosted_by: matt
   played_on: 2015-09-04
-  cover: ../images/covers/54-tigermilk.png
+  cover: ../images/covers/54-tigermilk.webp
   spotify: 3lgjPYJjH70HtpxrpVFH8U
   year: 1996
   released_on: '1996-06-06'
@@ -6205,7 +6205,7 @@
   artist: Late Of The Pier
   hosted_by: nick
   played_on: 2015-07-28
-  cover: ../images/covers/53-fantasy-black-channel.png
+  cover: ../images/covers/53-fantasy-black-channel.webp
   spotify: 3ztYSYN5zQE9I6Vu0TgVrz
   year: 2008
   released_on: '2008-06-09'
@@ -6252,7 +6252,7 @@
   artist: Gary Numan
   hosted_by: john
   played_on: 2015-06-26
-  cover: ../images/covers/52-the-pleasure-principle.jpg
+  cover: ../images/covers/52-the-pleasure-principle.webp
   spotify: 5xFlkqLDx3wbgqtvrez1n0
   year: 1979
   released_on: '1979-09-07'
@@ -6302,7 +6302,7 @@
   artist: Ben Howard
   hosted_by: neil
   played_on: 2015-05-04
-  cover: ../images/covers/51-every-kingdom.jpg
+  cover: ../images/covers/51-every-kingdom.webp
   spotify: 57PgT4iuDurzlJnkYjrpce
   year: 2011
   released_on: '2011-01-01'
@@ -6343,7 +6343,7 @@
   artist: The Goats
   hosted_by: andrew
   played_on: 2015-04-27
-  cover: ../images/covers/50-tricks-of-the-shade.jpg
+  cover: ../images/covers/50-tricks-of-the-shade.webp
   released_on: '1992-11-03'
   spotify: 5VRuDz8BuBOVW21WN0DSgs
   year: 1992
@@ -6429,7 +6429,7 @@
   artist: Bob Dylan
   hosted_by: wendy
   played_on: 2015-03-27
-  cover: ../images/covers/49-blood-on-the-tracks.png
+  cover: ../images/covers/49-blood-on-the-tracks.webp
   spotify: 4WD4pslu83FF6oMa1e19mF
   year: 1975
   released_on: '1975-01-17'
@@ -6470,7 +6470,7 @@
   artist: Elliott Smith
   hosted_by: mat
   played_on: 2015-02-16
-  cover: ../images/covers/48-figure-.png
+  cover: ../images/covers/48-figure-.webp
   spotify: 7DC0pE943VR5tAKIvQXHts
   year: 2000
   released_on: '2000-01-01'
@@ -6529,7 +6529,7 @@
   artist: Fairport Convention
   hosted_by: matt
   played_on: 2015-01-16
-  cover: ../images/covers/47-liege--lief.jpg
+  cover: ../images/covers/47-liege--lief.webp
   spotify: 505zw4fKgpk8HXqyw3BMFq
   year: 1969
   released_on: '1969-12-01'
@@ -6564,7 +6564,7 @@
   artist: Neil Young
   hosted_by: nick
   played_on: 2015-01-02
-  cover: ../images/covers/46-harvest.png
+  cover: ../images/covers/46-harvest.webp
   spotify: 2l3QxNo4QubBNmVKxLeum0
   year: 1972
   released_on: '1972-02-01'
@@ -6605,7 +6605,7 @@
   artist: U2
   hosted_by: john
   played_on: 2014-11-07
-  cover: ../images/covers/45-boy.png
+  cover: ../images/covers/45-boy.webp
   spotify: 2co53OwPjlTvPDQTpErBtU
   year: 1980
   released_on: '1980-10-20'
@@ -6649,7 +6649,7 @@
   artist: Led Zeppelin
   hosted_by: neil
   played_on: 2014-10-24
-  cover: ../images/covers/44-led-zeppelin-iv.png
+  cover: ../images/covers/44-led-zeppelin-iv.webp
   spotify: 5EyIDBAqhnlkAHqvPRwdbX
   year: 1971
   released_on: '1971-11-08'
@@ -6684,7 +6684,7 @@
   artist: Stevie Wonder
   hosted_by: andrew
   played_on: 2014-09-26
-  cover: ../images/covers/43-innervisions.png
+  cover: ../images/covers/43-innervisions.webp
   spotify: 5jgI8Eminx9MmLBontDWq8
   year: 1973
   released_on: '1973-08-03'
@@ -6722,7 +6722,7 @@
   artist: The Jon Spencer Blues Explosion
   hosted_by: mat
   played_on: 2014-09-03
-  cover: ../images/covers/42-now-i-got-worry.jpg
+  cover: ../images/covers/42-now-i-got-worry.webp
   spotify: 4YdRkiUOxwFg7YIgi3bqgN
   year: 2010
   released_on: '2010-04-01'
@@ -6781,7 +6781,7 @@
   artist: New Order
   hosted_by: matt
   played_on: 2014-07-24
-  cover: ../images/covers/41-power-corruption--lies.jpg
+  cover: ../images/covers/41-power-corruption--lies.webp
   spotify: 6NTrwu1XJ56jBPx7HMksbZ
   year: 1983
   released_on: '1983-05-02'
@@ -6816,7 +6816,7 @@
   artist: David Bowie
   hosted_by: bill
   played_on: 2014-06-27
-  cover: ../images/covers/40-low.png
+  cover: ../images/covers/40-low.webp
   released_on: '1977-01-14'
   spotify: 2de6LD7eOW8zrlorbS28na
   year: 1977
@@ -6860,7 +6860,7 @@
   artist: Screaming Trees
   hosted_by: john
   played_on: 2014-05-30
-  cover: ../images/covers/39-dust.jpg
+  cover: ../images/covers/39-dust.webp
   tags:
   - psychedelic rock
   - grunge
@@ -6907,7 +6907,7 @@
   artist: Pink Floyd
   hosted_by: neil
   played_on: 2014-04-11
-  cover: ../images/covers/38-dark-side-of-the-moon.png
+  cover: ../images/covers/38-dark-side-of-the-moon.webp
   spotify: 2WT1pbYjLJciAR26yMebkH
   year: 1973
   released_on: '1973-03-01'
@@ -6948,7 +6948,7 @@
   artist: "Stephen Hough (piano); Andrew Litton (conductor): Dallas Symphony Orchestra"
   hosted_by: andrew
   played_on: 2014-03-14
-  cover: ../images/covers/37-piano-concertos-nos-2-3.png
+  cover: ../images/covers/37-piano-concertos-nos-2-3.webp
   spotify: 6LC6CJTFAcfCNnan4AncdY
   year: 2004
   released_on: '2004-10-01'
@@ -6980,7 +6980,7 @@
   artist: Explosions In The Sky
   hosted_by: mat
   played_on: 2014-02-12
-  cover: ../images/covers/36-the-earth-is-not-a-cold-dead-place.png
+  cover: ../images/covers/36-the-earth-is-not-a-cold-dead-place.webp
   tags:
   - post-rock
   spotify: 1Kea0bYAee4cGaMY7KAcMl?si
@@ -7013,7 +7013,7 @@
   artist: This Many Boyfriends
   hosted_by: matt
   played_on: 2014-01-17
-  cover: ../images/covers/35-this-many-boyfriends.jpg
+  cover: ../images/covers/35-this-many-boyfriends.webp
   spotify: 229xKqq2v5CIUFi6rB6cVn
   year: 2012
   released_on: '2012-10-08'
@@ -7054,7 +7054,7 @@
   artist: Genesis
   hosted_by: bill
   played_on: 2013-12-19
-  cover: ../images/covers/34-selling-england-by-the-pound.png
+  cover: ../images/covers/34-selling-england-by-the-pound.webp
   spotify: 1rZGSWC3pMmejDwYG0ZXma
   year: 1973
   released_on: '1973-10-12'
@@ -7089,7 +7089,7 @@
   artist: Magazine
   hosted_by: john
   played_on: 2013-11-15
-  cover: ../images/covers/33-real-life.png
+  cover: ../images/covers/33-real-life.webp
   spotify: 5cy3t8bW0lNzw9hjCPkRUT
   year: 2007
   released_on: '2007-01-01'
@@ -7127,7 +7127,7 @@
   artist: JJ72
   hosted_by: tim
   played_on: 2013-10-24
-  cover: ../images/covers/32-jj72.png
+  cover: ../images/covers/32-jj72.webp
   spotify: 0z1sTr9dBNisxieKH7GQ6u
   year: 2000
   released_on: '2000-09-11'
@@ -7174,7 +7174,7 @@
   artist: The Beatles
   hosted_by: neil
   played_on: 2013-09-20
-  cover: ../images/covers/31-revolver.jpg
+  cover: ../images/covers/31-revolver.webp
   spotify: 3PRoXYsngSwjEQWR5PsHWR
   year: 1966
   released_on: '1966-08-05'
@@ -7227,7 +7227,7 @@
   artist: Roxy Music
   hosted_by: andrew
   played_on: 2013-08-15
-  cover: ../images/covers/30-siren.png
+  cover: ../images/covers/30-siren.webp
   spotify: 5Tpor3YZBVEJ9tWD5L31mH
   year: 1975
   released_on: '1975-10-01'
@@ -7265,7 +7265,7 @@
   artist: Beastie Boys
   hosted_by: mat
   played_on: 2013-07-18
-  cover: ../images/covers/29-check-your-head.png
+  cover: ../images/covers/29-check-your-head.webp
   spotify: 04FRBQIphnjVWLyAs9j5mo
   year: 1992
   released_on: '1992-04-21'
@@ -7336,7 +7336,7 @@
   artist: Pavement
   hosted_by: matt
   played_on: 2013-06-14
-  cover: ../images/covers/28-brighten-the-corners.jpg
+  cover: ../images/covers/28-brighten-the-corners.webp
   spotify: 1Q6ikDUK4RFtLI3N9Lll9h
   year: 1997
   released_on: '1997-02-11'
@@ -7383,7 +7383,7 @@
   artist: The Doors
   hosted_by: bill
   played_on: 2013-05-16
-  cover: ../images/covers/27-la-woman.jpg
+  cover: ../images/covers/27-la-woman.webp
   spotify: 7IKUTIc9UWuVngyGPtqNHS
   year: 1971
   released_on: '1971-04-19'
@@ -7424,7 +7424,7 @@
   artist: Manic Street Preachers
   hosted_by: john
   played_on: 2013-04-19
-  cover: ../images/covers/26-the-holy-bible.png
+  cover: ../images/covers/26-the-holy-bible.webp
   spotify: 7FiPNXyrCGGWFqO4btxPEe
   year: 1994
   released_on: '1994-08-29'
@@ -7474,7 +7474,7 @@
   artist: James
   hosted_by: tim
   played_on: 2013-03-12
-  cover: ../images/covers/25-laid.png
+  cover: ../images/covers/25-laid.webp
   released_on: '1993-09-27'
   spotify: 5pALyxshOPc8LLKggzNvQe
   year: 1993
@@ -7524,7 +7524,7 @@
   artist: Bloc Party
   hosted_by: neil
   played_on: 2013-02-22
-  cover: ../images/covers/24-silent-alarm.png
+  cover: ../images/covers/24-silent-alarm.webp
   spotify: 4KeTvCYCel3Ky58FirciWp
   year: 2005
   released_on: '2005-01-01'
@@ -7574,7 +7574,7 @@
   artist: Ride
   hosted_by: mat
   played_on: 2013-01-18
-  cover: ../images/covers/23-carnival-of-light.png
+  cover: ../images/covers/23-carnival-of-light.webp
   spotify: 2ujAyCgzTLrWXVJxh6yxLY
   year: 1994
   released_on: '1994-06-20'
@@ -7631,7 +7631,7 @@
   hosted_by: andrew
   played_on: 2013-01-04
   month_slot: 2012-12-01
-  cover: ../images/covers/22-human-racing.png
+  cover: ../images/covers/22-human-racing.webp
   spotify: 5cl4eOKYrrX0pcFFnEieYR
   year: 1984
   released_on: '1984-01-01'
@@ -7672,7 +7672,7 @@
   artist: The Style Council
   hosted_by: matt
   played_on: 2012-11-29
-  cover: ../images/covers/21-our-favourite-shop.jpg
+  cover: ../images/covers/21-our-favourite-shop.webp
   released_on: '1985-06-08'
   spotify: 75nT99YVabgYL2UcyKrPHa
   year: 1985
@@ -7725,7 +7725,7 @@
   artist: David Bowie
   hosted_by: bill
   played_on: 2012-10-18
-  cover: ../images/covers/20-scary-monsters.jpg
+  cover: ../images/covers/20-scary-monsters.webp
   released_on: '1980-09-12'
   spotify: 5fxvWHvIDPIALfTfRiwyB0
   year: 1980
@@ -7766,7 +7766,7 @@
   artist: Echo & the Bunnymen
   hosted_by: john
   played_on: 2012-09-20
-  cover: ../images/covers/19-heaven-up-here.png
+  cover: ../images/covers/19-heaven-up-here.webp
   spotify: 2jnfTHz4rKiOXbpU88TpNS
   year: 1981
   released_on: '1981-05-30'
@@ -7810,7 +7810,7 @@
   artist: Creedence Clearwater Revival
   hosted_by: tim
   played_on: 2012-08-10
-  cover: ../images/covers/18-cosmos-factory.png
+  cover: ../images/covers/18-cosmos-factory.webp
   spotify: 5w2X5ZmdE4u0XGkOU7BiLG
   year: 1970
   released_on: '1970-07-24'
@@ -7854,7 +7854,7 @@
   artist: Radiohead
   hosted_by: neil
   played_on: 2012-07-17
-  cover: ../images/covers/17-ok-computer.png
+  cover: ../images/covers/17-ok-computer.webp
   spotify: 6dVIqQ8qmQ5GBnJ9shOYGE
   year: 1997
   released_on: '1997-05-28'
@@ -7901,7 +7901,7 @@
   artist: George Harrison
   hosted_by: andrew
   played_on: 2012-06-21
-  cover: ../images/covers/16-living-in-the-material-world.jpg
+  cover: ../images/covers/16-living-in-the-material-world.webp
   spotify: 6DfpxC0hn5JTusslgO0IYj
   year: 1973
   released_on: '1973-05-30'
@@ -7954,7 +7954,7 @@
   artist: PJ Harvey
   hosted_by: mat
   played_on: 2012-05-03
-  cover: ../images/covers/15-rid-of-me.jpg
+  cover: ../images/covers/15-rid-of-me.webp
   links:
   - label: Pitchfork review
     url: https://pitchfork.com/reviews/albums/pj-harvey-rid-of-me/
@@ -8010,7 +8010,7 @@
   artist: The Wedding Present
   hosted_by: matt
   played_on: 2012-04-04
-  cover: ../images/covers/14-bizarro.png
+  cover: ../images/covers/14-bizarro.webp
   released_on: '1989-10-23'
   spotify: 3tp8pJWiuLPiwxZ1URt1OP
   year: 1989
@@ -8051,7 +8051,7 @@
   artist: Pink Floyd
   hosted_by: bill
   played_on: 2012-03-16
-  cover: ../images/covers/13-the-wall.png
+  cover: ../images/covers/13-the-wall.webp
   spotify: 6WaIQHxEHtZL0RZ62AuY0g
   year: 1979
   released_on: '1979-11-30'
@@ -8140,7 +8140,7 @@
   artist: Pixies
   hosted_by: john
   played_on: 2012-02-16
-  cover: ../images/covers/12-doolittle.jpg
+  cover: ../images/covers/12-doolittle.webp
   spotify: 0DQyTVcDhK9wm0f6RaErWO
   year: 1989
   released_on: '1989-04-17'
@@ -8196,7 +8196,7 @@
   artist: Corduroy
   hosted_by: tim
   played_on: 2012-01-23
-  cover: ../images/covers/11-high-havoc.jpg
+  cover: ../images/covers/11-high-havoc.webp
   spotify: 6xgXGbhqrLTkHeI3A3OUt2
   year: 1993
   released_on: '1993-01-01'
@@ -8246,7 +8246,7 @@
   artist: Pulp
   hosted_by: neil
   played_on: 2011-11-24
-  cover: ../images/covers/10-different-class.png
+  cover: ../images/covers/10-different-class.webp
   spotify: 3ly9T2L4pqTZijFgQssd3x
   year: 1995
   released_on: '1995-10-30'
@@ -8293,7 +8293,7 @@
   artist: The Who
   hosted_by: andrew
   played_on: 2011-10-08
-  cover: ../images/covers/9-tommy.jpg
+  cover: ../images/covers/9-tommy.webp
   spotify: 2srjzxgFaYLNh8UlJPAJ8b
   year: 1969
   released_on: '1969-05-23'
@@ -8377,7 +8377,7 @@
   hosted_by: mat
   played_on: 2011-10-06
   month_slot: 2011-09-01
-  cover: ../images/covers/8-real-life.jpg
+  cover: ../images/covers/8-real-life.webp
   spotify: 2WD1CkGrspWkW6U8Ya4Ow0
   year: 2007
   released_on: '2007-07-22'
@@ -8418,7 +8418,7 @@
   artist: Beck
   hosted_by: matt
   played_on: 2011-08-18
-  cover: ../images/covers/7-mellow-gold.jpg
+  cover: ../images/covers/7-mellow-gold.webp
   spotify: 1M1dhwZE65bqGfbUdMzvlj
   year: 1994
   released_on: '1994-03-01'
@@ -8468,7 +8468,7 @@
   artist: The Jam
   hosted_by: bill
   played_on: 2011-07-28
-  cover: ../images/covers/6-sound-affects.png
+  cover: ../images/covers/6-sound-affects.webp
   spotify: 4DkUmnDgrkBTk1RGLCTZcb
   year: 1980
   released_on: '1980-11-28'
@@ -8512,7 +8512,7 @@
   artist: The Stone Roses
   hosted_by: neil
   played_on: 2011-06-23
-  cover: ../images/covers/5-the-stone-roses.png
+  cover: ../images/covers/5-the-stone-roses.webp
   spotify: 0um9FI6BLBldL5POP4D4Cw
   year: 1989
   released_on: '1989-05-02'
@@ -8559,7 +8559,7 @@
   artist: John Martyn
   hosted_by: andrew
   played_on: 2011-05-13
-  cover: ../images/covers/4-one-world.png
+  cover: ../images/covers/4-one-world.webp
   spotify: 78WlsSQKrX4suYf909Fcrm
   year: 1977
   released_on: '1977-01-01'
@@ -8594,7 +8594,7 @@
   artist: Jeff Buckley
   hosted_by: mat
   played_on: 2011-04-15
-  cover: ../images/covers/3-grace.png
+  cover: ../images/covers/3-grace.webp
   released_on: '1994-08-24'
   spotify: 7yQtjAjhtNi76KRu05XWFS
   year: 1994
@@ -8635,7 +8635,7 @@
   artist: The Specials
   hosted_by: matt
   played_on: 2011-03-25
-  cover: ../images/covers/2-the-specials.jpg
+  cover: ../images/covers/2-the-specials.webp
   spotify: 2OHPxPTasGkolt8lFDxCpE
   year: 1979
   released_on: '1979-11-01'
@@ -8688,7 +8688,7 @@
   artist: David Bowie
   hosted_by: bill
   played_on: 2011-02-16
-  cover: ../images/covers/1-hunky-dory.png
+  cover: ../images/covers/1-hunky-dory.webp
   cover_external: ""
   spotify: 6fQElzBNTiEMGdIeY0hy5l
   year: 1971
