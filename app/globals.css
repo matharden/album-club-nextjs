@@ -1,9 +1,19 @@
 :root {
   --color-foreground: #000;
+  --color-background: #fff;
   --color-link: #000;
 
   --font-sans: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   --font-serif: var(--font-name, Caprasimo);
+
+  --font-enormous: 5rem; /* large stat numbers */
+  --font-huge: 3rem; /* title (desktop), search (desktop), big stats */
+  --font-big: 2rem; /* h1, album title */
+  --font-medium: 1.25rem; /* title, search, graph labels */
+  --font-small: 1rem; /* small */
+  --font-tiny: 0.75rem; /* small print */
+
+  --page-width: 1280px;
 }
 
 body {

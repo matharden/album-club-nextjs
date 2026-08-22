@@ -15,14 +15,15 @@
   left: 0;
   height: 55px;
   margin: 1rem auto;
-  max-width: 1280px;
+  max-width: var(--page-width);
   min-height: 55px;
-  padding: 0 5%;
+  padding: 0 max(calc(50vw - var(--page-width) / 2), 5%);
   position: sticky;
   top: 0;
+  width: 90vw;
   z-index: 2;
 
-  &SearchOpen {
+  &MenuOpen {
     position: static;
   }
 

@@ -2,10 +2,10 @@
 
 import cn from "classnames";
 import Link from "next/link";
-import { useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 
 import Icon from "@/components/Icon";
-import Search from "@/components/Search";
+import Menu from "@/components/Menu";
 
 import styles from "./Layout.module.scss";
 
@@ -20,23 +20,26 @@ const Layout = ({
   sticky?: ReactNode;
   title: string;
 }) => {
-  const [searchOpen, setSearchOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuClose = useCallback(() => setMenuOpen(false), []);
 
   useEffect(() => {
-    document.body.style.overflow = searchOpen ? "hidden" : "";
-  }, [searchOpen]);
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+  }, [menuOpen]);
 
   return (
     <>
-      <header className={cn(styles.header, { [styles.headerSearchOpen]: searchOpen })}>
+      <Menu open={menuOpen} onClose={handleMenuClose} />
+
+      <header className={cn(styles.header, { [styles.headerMenuOpen]: menuOpen })}>
         <Link href="/" className={styles.title}>
           {title}
         </Link>
         {/* {breadcrumb && ` / ${breadcrumb}`} */}
-        <button onClick={() => setSearchOpen((s) => !s)} className={styles.button}>
-          <Icon icon="search" />
+        <button onClick={() => setMenuOpen(true)} className={styles.button}>
+          <Icon icon="menu" />
         </button>
-        <Search open={searchOpen} onClose={setSearchOpen} />
       </header>
       <div className={styles.line} />
       <div className={styles.inner} />
