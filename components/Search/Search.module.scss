@@ -1,66 +1,74 @@
-/**
-  * [1] Squish to corner of screen.
-  * [2] Delay the hidding (squish) until animations have finished.
-  * [3] Override the transition to instantly position the element.
-        This should be equal to the slowest property in the initial transition.
-  */
-
-
 .el {
+  flex: 1;
+}
+
+.form {
+  background: #000;
+  left: 0;
+  margin: 3rem auto;
+  max-width: var(--page-width);
+  min-height: 55px;
+  padding: 0 max(calc(50vw - var(--page-width) / 2), 5%);
+  position: sticky;
+  top: 0;
+  width: 90vw;
+  z-index: 2;
+}
+
+.line {
+  border-top: 3px solid #fff;
+  position: sticky;
+  top: 55px;
+  transition: border-color 0s var(--fade-in-time);
+  z-index: 2;
+}
+
+.inner {
+  border-top: 3px solid #000;
+  margin-top: -3px;
+  position: sticky;
+  top: 52px;
+  transition: border-color 0s var(--fade-in-time);
+  z-index: 3;
+}
+
+/* The standalone /search page, which has no dark dialog behind it. */
+.page {
   background: #000;
   color: #fff;
-  top: 100vh;  /* [1] */
-  right: 0;  /* [1] */
-  bottom: 0;  /* [1] */
-  left: 100vw;  /* [1] */
-  opacity: 0;
-  position: fixed;
-  transition:
-    opacity 500ms,
-    transform 700ms,
-    top 0s 700ms, /* [2] */
-    left 0s 700ms; /* [2] */
-  z-index: 4;
-  // backdrop-filter: saturate(180%) blur(5px);
+  /* A block formatting context, so the form's top margin does not collapse
+     through and leave the page background showing above it. */
+  display: flow-root;
+  min-height: 100vh;
 }
 
-.open {
-  opacity: 1;
-  inset: 0;
-  overflow: auto;
-  transition:
-    opacity 700ms,
-    transform 400ms,
-    top 0s,  /* [3] */
-    left 0s;  /* [3] */
-}
-
-.close {
-  top: 16px;
-  right: 16px;
-  background: none;
+/* The home button on the standalone search page, where there is no menu
+   close button to sit in the same spot. */
+.home {
+  align-items: center;
+  background: #000;
   border: 0;
+  border-radius: 48px;
   color: #fff;
   cursor: pointer;
+  display: flex;
   height: 48px;
+  justify-content: center;
   padding: 0;
-  width: 48px;
-}
-
-.open .close {
   position: fixed;
+  right: calc(50vw - min(90%, var(--page-width)) / 2);
+  top: calc(3rem + 4px);
+  width: 48px;
+  z-index: 4;
 }
 
 .query {
-  background: #000;
+  background: transparent;
   border: 0;
   color: #fff;
   font-family: var(--font-serif);
   font-size: 3rem;
-  margin: 0 auto 1rem;
   outline: 0;
-  padding: 0.25em calc(10% + 48px) 0.25em 10%;
-  position: fixed;
   width: 100%;
 
   &::-webkit-search-decoration,
@@ -69,13 +77,18 @@
   &::-webkit-search-results-decoration {
     display: none;
   }
+
+  &::placeholder {
+    color: #999;
+  }
 }
 
 .results {
   font-family: var(--font-serif);
   list-style: none;
-  margin: 100px auto 7rem;
-  max-width: 80%;
+  margin: 2rem auto 7rem;
+  width: 90%;
+  max-width: var(--page-width);
   padding: 0;
 }
 
