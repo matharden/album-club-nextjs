@@ -101,12 +101,6 @@ const Search = ({
         />
         {children}
       </form>
-      {query && (
-        <>
-          <div className={styles.line} />
-          <div className={styles.inner} />
-        </>
-      )}
       {results && query && (
         <ul className={styles.results}>
           {results.map((result) => (
