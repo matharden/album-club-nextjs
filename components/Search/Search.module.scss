@@ -13,23 +13,21 @@
   top: 0;
   width: 90vw;
   z-index: 2;
+
+  border-bottom: 0 solid #fff;
+  animation: revealBorder linear both;
+  animation-timeline: scroll(nearest);
+  /* Start and end of animation. */
+  animation-range: 94px 100px;
 }
 
-.line {
-  border-top: 3px solid #fff;
-  position: sticky;
-  top: 55px;
-  transition: border-color 0s var(--fade-in-time);
-  z-index: 2;
-}
-
-.inner {
-  border-top: 3px solid #000;
-  margin-top: -3px;
-  position: sticky;
-  top: 52px;
-  transition: border-color 0s var(--fade-in-time);
-  z-index: 3;
+@keyframes revealBorder {
+  from {
+    border-width: 0;
+  }
+  to {
+    border-width: 3px;
+  }
 }
 
 /* The standalone /search page, which has no dark dialog behind it. */

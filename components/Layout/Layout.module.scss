@@ -23,6 +23,12 @@
   width: 90vw;
   z-index: 2;
 
+  border-bottom: 0 solid #000;
+  animation: revealBorder linear both;
+  animation-timeline: scroll(root);
+  /* Start and end of animation. */
+  animation-range: 94px 100px;
+
   &MenuOpen {
     position: static;
   }
@@ -32,6 +38,15 @@
   // @media(min-width: 1280px) {
   //   padding: 0 calc((100vw - 1280px) / 2);
   // }
+}
+
+@keyframes revealBorder {
+  from {
+    border-width: 0;
+  }
+  to {
+    border-width: 3px;
+  }
 }
 
 .title {
@@ -55,21 +70,6 @@
   height: 48px;
   padding: 0;
   width: 48px;
-}
-
-.line {
-  border-top: 3px solid;
-  position: sticky;
-  top: 55px;
-  z-index: 2;
-}
-
-.inner {
-  border-top: 3px solid #fff;
-  margin-top: -3px;
-  position: sticky;
-  top: 52px;
-  z-index: 3;
 }
 
 .stickyWrapper {

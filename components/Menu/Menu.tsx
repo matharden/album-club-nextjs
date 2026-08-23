@@ -54,15 +54,6 @@ const Menu = ({
         onQueryChange={handleQueryChange}
       />
 
-      {/* The sticky rule and the mask that hides content scrolling under it.
-          Search renders its own pair once it has a query. */}
-      {!searchQuery && (
-        <>
-          <div className={styles.line} />
-          <div className={styles.inner} />
-        </>
-      )}
-
       <div className={styles.menu} hidden={!!searchQuery}>
         <nav>
           <ul className={styles.navGroup}>

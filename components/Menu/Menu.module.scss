@@ -25,29 +25,10 @@
 }
 
 @starting-style {
-  .el[open],
-  .el[open] .line,
-  .el[open] .inner {
+  .el[open] {
     background-color: rgb(0 0 0 / 0);
     border-color: rgb(0 0 0 / 0);
   }
-}
-
-.line {
-  border-top: 3px solid #fff;
-  position: sticky;
-  top: 55px;
-  transition: border-color 0s var(--fade-in-time);
-  z-index: 2;
-}
-
-.inner {
-  border-top: 3px solid #000;
-  margin-top: -3px;
-  position: sticky;
-  top: 52px;
-  transition: border-color 0s var(--fade-in-time);
-  z-index: 3;
 }
 
 .close {

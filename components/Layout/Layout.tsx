@@ -41,8 +41,6 @@ const Layout = ({
           <Icon icon="menu" />
         </button>
       </header>
-      <div className={styles.line} />
-      <div className={styles.inner} />
       <div className={styles.stickyWrapper}>{sticky}</div>
       <div className={styles.el}>{children}</div>
     </>
