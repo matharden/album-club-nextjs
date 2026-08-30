@@ -3,7 +3,7 @@
   title: Let It Be You
   hosted_by: mat
   played_on: 2026-08-26
-  cover_external: https://upload.wikimedia.org/wikipedia/en/c/cd/Joan_As_Police_Woman_-_Let_It_Be_You.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled
+  cover: ../images/covers/186-let-it-be-you.webp
   released_on: 2016-10-21
   spotify: 3V6M2bqMIbtNcJTWZfmRk2
   year: 2016
@@ -44,7 +44,7 @@
   title: Fire and Water
   hosted_by: nick
   played_on: 2026-07-09
-  cover_external: https://upload.wikimedia.org/wikipedia/en/c/c6/Fireandwater_albumcover.jpg
+  cover: ../images/covers/185-fire-and-water.webp
   released_on: 1970-06-26
   spotify: 1ydlm89JR8cV8VuSaNvHNL
   year: 1970
@@ -76,7 +76,7 @@
   title: Slanted and Enchanted
   hosted_by: matt
   played_on: 2026-07-01
-  cover_external: https://www.normanrecords.com/artwork/medium/225/101725-pavement-slanted-enchanted.jpg
+  cover: ../images/covers/184-slanted-and-enchanted.webp
   released_on: 1992-04-20
   spotify: 7o14zVcXSRk7clV6QCEdOD
   year: 1992
@@ -129,7 +129,7 @@
   title: GOOD FOR THE SOUL
   hosted_by: wendy
   played_on: 2026-05-29
-  cover_external: https://i.scdn.co/image/ab67616d00001e02721f880e45da5ca31ceaeb67
+  cover: ../images/covers/183-good-for-the-soul.webp
   released_on: 2025-09-19
   spotify: 1RWoRM3u9vb7AMDSWkaZtG
   year: 2025
@@ -173,7 +173,7 @@
   title: Songs From The Big Chair
   hosted_by: andrew
   played_on: 2026-04-15
-  cover_external: https://upload.wikimedia.org/wikipedia/en/f/f5/Tears_for_Fears_Songs_from_the_Big_Chair.jpg
+  cover: ../images/covers/182-songs-from-the-big-chair.webp
   released_on: 1985-02-25
   spotify:
   year: 1985
@@ -208,7 +208,7 @@
   title: Separation Sunday
   hosted_by: ed
   played_on: 2026-03-05
-  cover_external: https://www.normanrecords.com/artwork/large/179/161929-the-hold-steady-separation-sunday.jpg
+  cover: ../images/covers/181-separation-sunday.webp
   released_on: 2005-05-03
   spotify: 24Oiq05i0ubW0JzitY5paj
   year: 2005
@@ -252,7 +252,7 @@
   title: Sugarcoat
   hosted_by: john
   played_on: 2026-02-13
-  cover_external: https://i.scdn.co/image/ab67616d00001e022b6ef464fd5cf3b56f263e06
+  cover: ../images/covers/180-sugarcoat.webp
   released_on: 2024-05-03
   spotify: 0EQL2KDngVugkK73uORAyW
   year: 2024
@@ -296,7 +296,7 @@
   title: S/T
   hosted_by: mat
   played_on: 2026-01-22
-  cover_external: https://i.scdn.co/image/ab67616d00001e0246db3c1d529e0d7c0f7430ce
+  cover: ../images/covers/179-st.webp
   released_on: 2008-01-29
   spotify: 72vAmnfrNfzORX6gG7p8Jf
   year: 2008
@@ -323,13 +323,12 @@
     name: Burial on the Presidio Banks
     duration: 7:44
 
-
 - number: 178
   artist: Doves
   title: Lost Souls
   hosted_by: nick
   played_on: 2026-01-02
-  cover_external: https://media.pitchfork.com/photos/5929ba01c0084474cd0c2738/1:1/w_320,c_limit/780dd43b.gif
+  cover: ../images/covers/178-lost-souls.webp
   released_on: 2000-04-03
   spotify: 33nyNThvBKPzS4NGdnWACf
   year: 2000
@@ -376,7 +375,7 @@
   title: Bakesale
   hosted_by: matt
   played_on: 2025-11-27
-  cover_external: https://i.scdn.co/image/ab67616d00001e0279f12694a2b43cbced0642e5
+  cover: ../images/covers/177-bakesale.webp
   released_on: 1994-08-23
   spotify: 6rq3MXtcHWqWjCVWNj6N9j
   year: 1994
@@ -433,7 +432,7 @@
   title: Short Sharp Shocked
   hosted_by: wendy
   played_on: 2025-10-16
-  cover_external: https://upload.wikimedia.org/wikipedia/en/9/97/Short_Sharp_Shocked_%28Michelle_Shocked_album_-_cover_art%29.jpg
+  cover: ../images/covers/176-short-sharp-shocked.webp
   released_on: 1988-08-15
   spotify: 5DEiPW3MUpY78oPNcQsc1F
   year: 1988
