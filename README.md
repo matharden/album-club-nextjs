@@ -17,6 +17,7 @@ npm run dev
 | `npm run build` | Production build — also validates the YAML |
 | `npm start` | Serve the production build |
 | `npm run typecheck` | `tsc --noEmit` |
+| `npm run optimise-covers` | Re-encode `public/covers` to WebP (`-- --dry-run` to preview) |
 
 There is also a `docker-compose up` setup.
 
@@ -65,6 +66,16 @@ fails.
 Covers go in `public/covers/` and are referenced as
 `cover: ../images/covers/<file>`, rewritten to a public URL by the schema. An
 album with no local cover falls back to `cover_external`.
+
+After adding art, run `npm run optimise-covers`. It re-encodes anything that is
+not already WebP within a 1000px ceiling, renames the file, and updates the
+`cover:` paths in `data/albums.yml` to match. Covers arrive at wildly varying
+sizes — the initial pass took 115MB down to 17MB — and while `next/image`
+re-encodes on the fly so delivered bytes are unchanged, the originals are dead
+repo and deploy weight. The script is safe to re-run: a cover already within the
+ceiling is left untouched rather than re-encoded, so quality never compounds
+away. It also reports covers referenced by the YAML but missing from disk, and
+files no album uses. Pass `-- --dry-run` to see what it would do first.
 
 ## Notes from the Gatsby migration
 

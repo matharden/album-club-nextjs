@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "optimise-covers": "node scripts/optimise-covers.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
