@@ -1,3 +1,44 @@
+- number: 186
+  artist: Joan As Police Woman & Benjamin Lazar Davis
+  title: Let It Be You
+  hosted_by: mat
+  played_on: 2026-08-26
+  cover_external: https://upload.wikimedia.org/wikipedia/en/c/cd/Joan_As_Police_Woman_-_Let_It_Be_You.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled
+  released_on: 2016-10-21
+  spotify: 3V6M2bqMIbtNcJTWZfmRk2
+  year: 2016
+  tracks:
+  - number: 1
+    name: Broke Me In Two
+    duration: 2:54
+  - number: 2
+    name: Overloaded
+    duration: 3:25
+  - number: 3
+    name: Magic Lamp
+    duration: 3:23
+  - number: 4
+    name: Let It Be You
+    duration: 2:57
+  - number: 5
+    name: Hurts So Bad
+    duration: 3:45
+  - number: 6
+    name: Satellite
+    duration: 3:44
+  - number: 7
+    name: Easy Money
+    duration: 3:21
+  - number: 8
+    name: Violent Dove
+    duration: 3:43
+  - number: 9
+    name: Motorway
+    duration: 3:34
+  - number: 10
+    name: Station
+    duration: 6:10
+
 - number: 185
   artist: Free
   title: Fire and Water
@@ -134,7 +175,7 @@
   played_on: 2026-04-15
   cover_external: https://upload.wikimedia.org/wikipedia/en/f/f5/Tears_for_Fears_Songs_from_the_Big_Chair.jpg
   released_on: 1985-02-25
-  spotify: 
+  spotify:
   year: 1985
   tracks:
   - number: 1
