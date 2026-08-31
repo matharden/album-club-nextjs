@@ -1,7 +1,7 @@
 # Album Club
 
 A Next.js (App Router) site for a record-listening club. `data/albums.yml` is
-the CMS: commit a change to it and Vercel rebuilds.
+the content source: commit a change to it and Vercel rebuilds.
 
 ## Running locally
 
@@ -24,7 +24,7 @@ There is also a `docker-compose up` setup.
 ## Architecture
 
 ```
-data/albums.yml        # the CMS — 185 albums
+data/albums.yml        # content source 
 data/hosts.yml         # host name -> display name
 lib/schema.ts          # zod schema; the build fails on violations
 lib/content.ts         # read + validate + derive, once per build
@@ -77,15 +77,8 @@ ceiling is left untouched rather than re-encoded, so quality never compounds
 away. It also reports covers referenced by the YAML but missing from disk, and
 files no album uses. Pass `-- --dry-run` to see what it would do first.
 
-## Notes from the Gatsby migration
+## Notes on data management
 
-Three data-layer details are worth knowing, because they are silent traps:
-
-- **Track durations.** These are written `3:57`. Gatsby's js-yaml v3 resolved
-  that to `237` via YAML 1.1 sexagesimal integers, which is why the old schema
-  declared `duration: Int!`. js-yaml v4 dropped sexagesimal support and yields
-  the string `"3:57"`. `lib/schema.ts` now converts to seconds explicitly
-  rather than relying on the parser.
 - **Dates.** Unquoted `2024-11-22` parses to a `Date`; quoted `'2024-11-22'`
   stays a string. Both spellings appear in the file. The schema normalises to a
   `YYYY-MM-DD` string — what `@dateformat` used to hand the components, and what
@@ -95,22 +88,6 @@ Three data-layer details are worth knowing, because they are silent traps:
 - **Empty YAML** parses to `undefined`. That is the project's deliberate zero
   state, so the schema maps it to `[]`; anything actually malformed still fails
   the build.
-
-### Mapping
-
-| Gatsby | Here |
-| --- | --- |
-| Page query / `useStaticQuery` | `await getContent()` |
-| `gatsby-node.js` → `createPages` | `generateStaticParams()` |
-| `createSchemaCustomization` | `lib/schema.ts` (zod) |
-| `@link(by: "name", from: "hosted_by")` | Join in `getContent()` |
-| `gatsby-source-filesystem` + transformer | `fs.readFile` + `js-yaml` |
-| `gatsby-plugin-image` / sharp | `next/image` |
-| `react-helmet` / `Head` export | `metadata` / `generateMetadata()` |
-| `gatsby-plugin-google-gtag` | `next/script` in `app/layout.tsx` |
-| `gatsby-omni-font-loader` | `<link>` to Google Fonts in `app/layout.tsx` |
-| `gatsby-plugin-sass` | Built in (`sass` installed) |
-| GraphQL filters/sorts | `.filter()`, `.sort()`, `Map` indexes |
 
 ## Environment variables
 
