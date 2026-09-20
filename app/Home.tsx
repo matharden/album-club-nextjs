@@ -36,7 +36,6 @@ const releaseDate = (album: AlbumWithHost) =>
 
 const Home = ({ albums: allAlbums, title }: { albums: AlbumWithHost[]; title: string }) => {
   const [filter, setFilter] = useState<Filter>({ kind: "all" });
-  const [showFilters, setShowFilters] = useState(false);
   const [decadesAsc, setDecadesAsc] = useState("");
   const [yearsAsc, setYearsAsc] = useState("");
 
@@ -146,13 +145,15 @@ const Home = ({ albums: allAlbums, title }: { albums: AlbumWithHost[]; title: st
               </p>
             )}
 
-            <Icon
-              icon="filter"
-              className={cn(styles.filter, { [styles.filterOn]: showFilters })}
-              onClick={() => setShowFilters((f) => !f)}
-            />
+            <input type="checkbox" id="filters" className={styles.filterInput} />
+            <label htmlFor="filters">
+              <Icon
+                icon="filter"
+                className={styles.filter}
+              />
+            </label>
 
-            <ul className={cn(styles.list, { [styles.listShow]: showFilters })}>
+            <ul className={styles.list}>
               <li>
                 <a href="#everything" onClick={() => setFilter({ kind: "all" })}>
                   Everything

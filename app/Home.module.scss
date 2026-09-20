@@ -60,6 +60,38 @@ p.stat {
   padding-bottom: 4px;
 }
 
+.filterInput {
+  display: none;
+}
+
+.filterInput:checked ~ .list {
+  translate: 0;
+}
+
+.filterInput:checked ~ label .filter {
+  translate: 0 -40px;
+  --rotate-factor: 0;
+}
+
+/* 1. Register properties so CSS can smoothly interpolate them */
+@property --scroll-angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@property --rotate-factor {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 1;
+}
+
+/* 2. Keyframes drive the angle along the scroll */
+@keyframes spin {
+  from { --scroll-angle: 0deg; }
+  to   { --scroll-angle: 360deg; }
+}
+
 .filter {
   background: #fff;
   border-radius: 50px;
@@ -70,9 +102,18 @@ p.stat {
   transition: transform 250ms;
   right: 1rem;
   z-index: 2;
+  cursor: pointer;
 
-  &On {
-    transform: translateY(-40px);
+  animation: spin linear both 3;
+  animation-timeline: scroll(root);
+
+  /* Any angle multiplied by 0 becomes 0deg */
+  rotate: calc(var(--scroll-angle) * var(--rotate-factor, 1));
+  transition: --rotate-factor 0.45s ease;
+
+  /* 3. On hover, set factor to 0 -> angle glides to 0deg! */
+  &:hover {
+    --rotate-factor: 0;
   }
 }
 
@@ -89,8 +130,8 @@ p.stat {
   overflow: auto;
   padding: 0 0.5rem;
   position: fixed;
-  transform: translateY(100%);
-  transition: transform 250ms;
+  translate: 0 100%;
+  transition: translate 250ms;
   width: calc(100% - 1rem);
   z-index: 1;
 
@@ -106,10 +147,6 @@ p.stat {
   :target {
     color: red;
   }
-}
-
-.listShow {
-  transform: translateY(0);
 }
 
 .suffix br {
