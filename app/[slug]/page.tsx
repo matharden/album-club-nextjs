@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 
-import { getNeighbours, siteMetadata } from "@/lib/content";
+import { getContent, getNeighbours, siteMetadata } from "@/lib/content";
 import { allRouteSlugs, resolveRoute } from "@/lib/routes";
 
 import AlbumView from "./AlbumView";
+import HostView from "./HostView";
 import ListView from "./ListView";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -54,14 +55,20 @@ export default async function SlugPage({ params }: Params) {
     case "album-redirect":
       redirect(`/${route.album.slug}`);
 
-    case "host":
+    // Hosts get their own view; years and decades keep the plain list. The
+    // whole club comes along for the averages — `getContent()` is cached, so
+    // this is the same read the route resolver already did.
+    case "host": {
+      const { albums } = await getContent();
       return (
-        <ListView
+        <HostView
           albums={route.albums}
-          heading={`Chosen by ${route.host.display_name}`}
+          allAlbums={albums}
+          host={route.host}
           title={siteMetadata.title}
         />
       );
+    }
 
     case "year":
       return (
