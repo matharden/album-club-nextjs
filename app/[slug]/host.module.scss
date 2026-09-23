@@ -1,0 +1,118 @@
+// The host page borrows the home page's stat vocabulary — big serif figures,
+// small sans labels — so the two read as the same kind of summary.
+
+.el {
+  font-family: var(--font-serif);
+  margin-bottom: 6rem;
+
+  p {
+    color: #666;
+    font-family: var(--font-sans);
+  }
+}
+
+p.stat {
+  color: #999;
+  font-family: var(--font-serif);
+  font-size: var(--font-big);
+  line-height: 1;
+  margin: 0.2em 0;
+
+  strong,
+  .strong {
+    color: var(--color-foreground);
+    font-weight: 400;
+  }
+
+  &.big {
+    font-size: var(--font-huge);
+  }
+
+  .huge {
+    font-size: var(--font-enormous);
+    font-style: normal;
+  }
+
+  // The cadence and share lines are sentences rather than figures, so they sit
+  // at body size and keep their units on one line.
+  &.small {
+    font-size: var(--font-small);
+    margin: 1em 0;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.heading {
+  color: #666;
+  font-family: var(--font-sans);
+  font-size: var(--font-small);
+  font-weight: 400;
+}
+
+.heading2 {
+  border-bottom: 3px solid var(--color-foreground);
+  color: #666;
+  font-family: var(--font-sans);
+  font-size: var(--font-small);
+  font-weight: 400;
+  padding-bottom: 4px;
+}
+
+.suffix br {
+  display: none;
+}
+
+// Shares the home page's decade palette rather than restating it; the bars are
+// keyed by decade, so the two graphs would diverge if they were kept apart.
+.graph {
+  composes: graph from "../Home.module.scss";
+}
+
+// Host figure first, the club's beside it for contrast.
+.compare {
+  display: grid;
+  font-family: var(--font-sans);
+  grid-template-columns: 1fr auto;
+  margin: 0 0 2rem;
+  row-gap: 0.75rem;
+
+  dt {
+    align-self: baseline;
+    color: #666;
+    font-size: var(--font-small);
+  }
+
+  dd {
+    align-items: baseline;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    margin: 0;
+
+    strong,
+    .strong {
+      color: var(--color-foreground);
+      font-family: var(--font-serif);
+      font-size: var(--font-medium);
+      font-weight: 400;
+    }
+
+    span {
+      color: #999;
+      font-size: var(--font-tiny);
+      white-space: nowrap;
+    }
+  }
+}
+
+.lean {
+  font-size: var(--font-small);
+
+  strong {
+    color: var(--color-foreground);
+    font-weight: 400;
+  }
+}
