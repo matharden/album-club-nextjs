@@ -31,18 +31,34 @@ const Layout = ({
   return (
     <>
       <Menu open={menuOpen} onClose={handleMenuClose} />
-
-      <header className={cn(styles.header, { [styles.headerMenuOpen]: menuOpen })}>
-        <Link href="/" className={styles.title}>
-          {title}
-        </Link>
-        {/* {breadcrumb && ` / ${breadcrumb}`} */}
-        <button onClick={() => setMenuOpen(true)} className={styles.button}>
-          <Icon icon="menu" />
-        </button>
-      </header>
-      <div className={styles.stickyWrapper}>{sticky}</div>
-      <div className={styles.el}>{children}</div>
+      <section className={styles.stick}>
+        <header className={cn(styles.header, { [styles.headerMenuOpen]: menuOpen })}>
+          <Link href="/" className={styles.title}>
+            {title}
+          </Link>
+          {/* {breadcrumb && ` / ${breadcrumb}`} */}
+          <button onClick={() => setMenuOpen(true)} className={styles.button}>
+            <Icon icon="menu" />
+          </button>
+        </header>
+        <div className={styles.stickyWrapper}>{sticky}</div>
+        <div className={styles.el}>{children}</div>
+      </section>
+      <section className={styles.stick}>
+        <div className={styles.actualFooter}>
+          <div>
+            <div className={styles.logo}>
+              <span>AC</span>
+              <div className={styles.equalizer}>
+                <div className={styles.bar} />
+                <div className={styles.bar} />
+                <div className={styles.bar} />
+                <div className={styles.bar} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

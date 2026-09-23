@@ -2,9 +2,10 @@
 // may only contain selectors carrying at least one local class.
 
 .el {
-  margin: 1rem auto;
+  margin: 3rem auto 0;
   max-width: 1280px;
   width: 90%;
+  padding-bottom: 6rem;
 }
 
 .header {
@@ -14,7 +15,7 @@
   justify-content: space-between;
   left: 0;
   height: 55px;
-  margin: 1rem auto;
+  margin: 1rem auto 0;
   max-width: var(--page-width);
   min-height: 55px;
   padding: 0 max(calc(50vw - var(--page-width) / 2), 5%);
@@ -56,7 +57,7 @@
 
 @media(min-width: 431px) {
   .header {
-    margin: 3rem auto;
+    margin: 3rem auto 0;
   }
   .title {
     font-size: 3rem;
@@ -83,9 +84,9 @@
   margin: 2rem auto;
   max-width: 1280px;
   padding: 0 5%;
-  position: sticky;
-  top: 52px;
-  z-index: 3;
+  // position: sticky;
+  // top: 52px;
+  // z-index: 3;
 }
 
 .link {
@@ -95,7 +96,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  margin: 6rem 0 12rem;
+  margin: 6rem 0;
 }
 
 .archive {
@@ -107,5 +108,69 @@
 
   img {
     margin-right: 8px;
+  }
+}
+
+@keyframes equalizer {
+  from {
+    width: 0;
+  }
+  96% {
+    width: 0;
+  }
+  to {
+    width: var(--width, 100%);
+  }
+}
+
+.actualFooter {
+  background: #fff;
+  border-top: 3px solid #000;
+  margin-top: -3px;  // Hide border.
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  > div {
+    margin: auto;
+    max-width: 1280px;
+    padding: calc(55px + 1rem) 5% 1rem;
+    width: 90%;
+  }
+
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 9rem;
+    font-weight: 300;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .span {
+      line-height: 184px;
+    }
+  }
+
+  .equalizer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3px;
+    width: 150px;
+
+    .bar {
+      height: 23px;
+      background: gray;
+      opacity: 0.7;
+      width: 100%;
+      animation: equalizer linear both;
+      animation-timeline: scroll(root);
+    }
+
+    .bar:nth-child(1) { background: var(--color-1980s); --width: 75%; animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .bar:nth-child(2) { background: var(--color-1990s); --width: 100%; animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+    .bar:nth-child(3) { background: var(--color-2000s); --width: 65%; animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); }
+    .bar:nth-child(4) { background: var(--color-2010s); --width: 45%; animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   }
 }
