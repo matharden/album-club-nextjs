@@ -3,6 +3,15 @@
   --color-background: #fff;
   --color-link: #000;
 
+  --color-1960s: #c6604e;
+  --color-1970s: #a04b5b;
+  --color-1980s: #a5597a;
+  --color-1990s: #56787a;
+  --color-2000s: #6d8e58;
+  --color-2010s: #c2af8e;
+  --color-2020s: #9c917a;
+  --color-2030s: #524635;
+
   --font-sans: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   --font-serif: var(--font-name, Caprasimo);
 

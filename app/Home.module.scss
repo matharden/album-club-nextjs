@@ -156,14 +156,14 @@ p.stat {
 .graph {
   margin-bottom: 4rem;
   div { filter: opacity(0.7); }
-  [class*="196"] { background: #c6604e; }
-  [class*="197"] { background: #a04b5b; }
-  [class*="198"] { background: #a5597a; }
-  [class*="199"] { background: #56787a; }
-  [class*="200"] { background: #6d8e58; }
-  [class*="201"] { background: #c2af8e; }
-  [class*="202"] { background: #9c917a; }
-  [class*="203"] { background: #524635; }
+  [class*="196"] { background: var(--color-1960s); }
+  [class*="197"] { background: var(--color-1970s); }
+  [class*="198"] { background: var(--color-1980s); }
+  [class*="199"] { background: var(--color-1990s); }
+  [class*="200"] { background: var(--color-2000s); }
+  [class*="201"] { background: var(--color-2010s); }
+  [class*="202"] { background: var(--color-2020s); }
+  [class*="203"] { background: var(--color-2030s); }
 }
 
 .sort {
