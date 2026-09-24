@@ -1,3 +1,56 @@
+- number: 187
+  artist: The Primitives
+  title: Lovely
+  hosted_by: john
+  played_on: 2026-09-24
+  cover_external: https://upload.wikimedia.org/wikipedia/en/6/65/Primitiv_Lovely.jpg
+  released_on: 1988-03-01
+  spotify: 7dkhewp2B3L7YNsUp9u5GR
+  year: 1988
+  tracks:
+  - number: 1
+    name: Crash
+    duration: 2:32
+  - number: 2
+    name: Spacehead
+    duration: 2:11
+  - number: 3
+    name: Carry Me Home
+    duration: 2:55
+  - number: 4
+    name: Shadow
+    duration: 3:29
+  - number: 5
+    name: Thru The Flowers
+    duration: 2:31
+  - number: 6
+    name: Dreamwalk Baby
+    duration: 2:01
+  - number: 7
+    name: I'll Stick With You
+    duration: 2:34
+  - number: 8
+    name: Nothing Left
+    duration: 3:04
+  - number: 9
+    name: Stop Killing Me
+    duration: 2:05
+  - number: 10
+    name: Out Of Reach
+    duration: 2:20
+  - number: 11
+    name: Ocean Blue
+    duration: 3:25
+  - number: 12
+    name: Run Baby Run
+    duration: 2:33
+  - number: 13
+    name: Don't Want Anything To Change
+    duration: 1:52
+  - number: 14
+    name: Buzz Buzz Buzz
+    duration: 2:02
+
 - number: 186
   artist: Joan As Police Woman & Benjamin Lazar Davis
   title: Let It Be You
