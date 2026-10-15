@@ -1,3 +1,41 @@
+- number: 188
+  artist: Jane's Addiction
+  title: Ritual de lo Habitual
+  hosted_by: ed
+  played_on: 2026-10-15
+  cover_external: https://i.scdn.co/image/ab67616d00001e02ac34184efe90f1caae150cc7
+  released_on: 1990-08-21
+  spotify: 7acrrQejzV4ybWWTM8TmPf
+  year: 1990
+  tracks:
+  - number: 1
+    name: Stop!
+    duration: 4:14
+  - number: 2
+    name: No One's Leaving
+    duration: 3:01
+  - number: 3
+    name: Ain't No Right
+    duration: 3:34
+  - number: 4
+    name: Obvious
+    duration: 5:55
+  - number: 5
+    name: Been Caught Stealing
+    duration: 3:34
+  - number: 6
+    name: Three Days
+    duration: 10:48
+  - number: 7
+    name: Then She Did...
+    duration: 8:18
+  - number: 8
+    name: Of Course
+    duration: 7:02
+  - number: 9
+    name: Classic Girl
+    duration: 5:07
+
 - number: 187
   artist: The Primitives
   title: Lovely
