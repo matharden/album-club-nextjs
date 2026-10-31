@@ -36,6 +36,26 @@ function decadeOf(year: number): number {
   return Math.floor(year / 10) * 10;
 }
 
+/**
+ * URL slug for a tag: lowercase, with any run of spaces or punctuation turned
+ * into a single hyphen. "synth pop" and "synth-pop" share `synth-pop`, so
+ * spelling variants land on one page. (lodash `kebabCase` would split "70s"
+ * into "70-s", hence a hand-rolled one.)
+ */
+export function tagSlug(tag: string): string {
+  return tag
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export type Tag = {
+  slug: string;
+  /** The spelling first seen in albums.yml for this slug. */
+  name: string;
+  albums: AlbumWithHost[];
+};
+
 function push<K, V>(map: Map<K, V[]>, key: K, value: V): void {
   const list = map.get(key);
   if (list) list.push(value);
@@ -104,9 +124,26 @@ export const getContent = cache(async () => {
     list.sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
   }
 
+  // Tags keyed by slug, in file order (newest album first) within each tag.
+  const byTag = new Map<string, Tag>();
+  for (const album of albums) {
+    const seen = new Set<string>();
+    for (const name of album.tags ?? []) {
+      const slug = tagSlug(name);
+      if (!slug || seen.has(slug)) continue;
+      seen.add(slug);
+      const tag = byTag.get(slug);
+      if (tag) tag.albums.push(album);
+      else byTag.set(slug, { slug, name, albums: [album] });
+    }
+  }
+
   return {
     albums,
     hosts,
+    byTag,
+    /** Every tag, alphabetical by name. */
+    tags: [...byTag.values()].sort((a, b) => a.name.localeCompare(b.name)),
     byNumber,
     bySlug,
     byHost,

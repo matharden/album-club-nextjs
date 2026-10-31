@@ -6,7 +6,7 @@ import Album from "@/components/Album";
 import { Grid, GridItem } from "@/components/Grid";
 import Layout from "@/components/Layout";
 import AlbumNumber from "@/components/Number";
-import type { AlbumWithHost } from "@/lib/content";
+import { tagSlug, type AlbumWithHost } from "@/lib/content";
 import { rangeToDuration, toMinutes } from "@/lib/utils";
 
 import styles from "./album.module.scss";
@@ -105,7 +105,9 @@ export default function AlbumView({
           {tags && (
             <ul className={styles.tags}>
               {tags.map((tag) => (
-                <li key={tag}>{tag}</li>
+                <li key={tag}>
+                  <Link href={`/tag/${tagSlug(tag)}`}>{tag}</Link>
+                </li>
               ))}
             </ul>
           )}
