@@ -2,12 +2,15 @@
   "name": "album-club",
   "private": true,
   "scripts": {
+    "predev": "node scripts/fetch-data.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/fetch-data.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "optimise-covers": "node scripts/optimise-covers.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "data": "node scripts/fetch-data.mjs"
   },
   "dependencies": {
     "classnames": "^2.5.1",

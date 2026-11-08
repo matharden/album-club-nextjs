@@ -1,0 +1,25 @@
+# Rebuilds the club's site whenever its content changes.
+#
+# Setup: in Vercel, Project Settings -> Git -> Deploy Hooks, create a hook for
+# the production branch, then save its URL in this repo as the Actions secret
+# VERCEL_DEPLOY_HOOK (Settings -> Secrets and variables -> Actions).
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::error::VERCEL_DEPLOY_HOOK secret is not set"
+            exit 1
+          fi
+          curl --fail --silent --show-error -X POST "$HOOK"

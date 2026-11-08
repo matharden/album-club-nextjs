@@ -87,6 +87,17 @@ const emptyFileAsList = <T extends z.ZodTypeAny>(item: T) =>
 export const AlbumsFileSchema = emptyFileAsList(AlbumSchema);
 export const HostsFileSchema = emptyFileAsList(HostSchema);
 
+/** `site.yml`: optional, and so is every key in it. */
+export const SiteFileSchema = z.preprocess(
+  (value) => value ?? {},
+  z.object({
+    title: z.string().nullish(),
+    url: z.string().nullish(),
+    font: z.string().nullish(),
+    google_analytics_id: z.string().nullish(),
+  }),
+);
+
 export type Album = z.infer<typeof AlbumSchema>;
 export type Host = z.infer<typeof HostSchema>;
 export type Track = z.infer<typeof Track>;

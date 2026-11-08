@@ -1,0 +1,30 @@
+# Placeholder content so a fresh clone builds. Point ALBUM_CLUB_DATA_REPO (or
+# ALBUM_CLUB_DATA_DIR) at a real data repo to replace it.
+- number: 2
+  artist: The Sample Rates
+  title: Placeholder Sessions
+  hosted_by: sam
+  played_on: 2026-02-12
+  year: 2025
+  tags:
+  - indie
+  tracks:
+  - number: 1
+    name: Lorem
+    duration: 3:12
+  - number: 2
+    name: Ipsum
+    duration: 4:05
+
+- number: 1
+  artist: Example Ensemble
+  title: First Light
+  hosted_by: alex
+  played_on: 2026-01-15
+  year: 1999
+  tags:
+  - jazz
+  tracks:
+  - number: 1
+    name: Overture
+    duration: 5:40

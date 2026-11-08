@@ -1,5 +1,6 @@
 import "server-only";
 
+import { readFileSync } from "node:fs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { cache } from "react";
@@ -9,6 +10,7 @@ import { kebabCase } from "lodash";
 import {
   AlbumsFileSchema,
   HostsFileSchema,
+  SiteFileSchema,
   type Album,
   type Host,
 } from "./schema";
@@ -170,9 +172,29 @@ export const getNeighbours = cache(async (slug: string) => {
   };
 });
 
+/**
+ * Site settings come from the data repo's optional `site.yml`, so each club's
+ * branding travels with its content. A non-empty env var overrides the file,
+ * which keeps per-deployment tweaks (a preview `SITE_URL`, say) out of it.
+ */
+function readSiteFile() {
+  let raw: unknown;
+  try {
+    raw = yaml.load(readFileSync(path.join(DATA_DIR, "site.yml"), "utf8"));
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") raw = undefined;
+    else throw error;
+  }
+  return SiteFileSchema.parse(raw);
+}
+
+const siteFile = readSiteFile();
+const env = (name: string) => process.env[name] || undefined;
+
 export const siteMetadata = {
-  title: process.env.SITE_TITLE ?? "",
-  siteUrl: process.env.SITE_URL ?? "http://example.com",
-  fontName: process.env.GOOGLE_FONT_NAME ?? "",
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID ?? "",
+  title: env("SITE_TITLE") ?? siteFile.title ?? "",
+  siteUrl: env("SITE_URL") ?? siteFile.url ?? "http://example.com",
+  fontName: env("GOOGLE_FONT_NAME") ?? siteFile.font ?? "",
+  googleAnalyticsId:
+    env("GOOGLE_ANALYTICS_ID") ?? siteFile.google_analytics_id ?? "",
 };

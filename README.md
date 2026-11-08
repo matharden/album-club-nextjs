@@ -1,12 +1,51 @@
 # Album Club
 
-A Next.js (App Router) site for a record-listening club. `data/albums.yml` is
-the content source: commit a change to it and Vercel rebuilds.
+A Next.js (App Router) site for a record-listening club. The app holds no club
+content: each club keeps its albums, hosts, site settings and cover art in a
+separate data repo, pulled in at build time. One app, many clubs, each with its
+own data repo and Vercel project.
+
+## Data repos
+
+A data repo looks like `templates/data-repo/`:
+
+```
+albums.yml                       # newest first
+hosts.yml                        # host name -> display name
+site.yml                         # optional: title, url, font, google_analytics_id
+covers/                          # cover art, referenced as ../images/covers/<file>
+.github/workflows/deploy.yml     # pings a Vercel deploy hook on push to main
+```
+
+`scripts/fetch-data.mjs` runs before `dev` and `build` and fills the gitignored
+`data/` and `public/covers/` from the first source that is set:
+
+| Variable | Source |
+| --- | --- |
+| `ALBUM_CLUB_DATA_DIR` | A local checkout, symlinked so edits land in that repo |
+| `ALBUM_CLUB_DATA_REPO` | `owner/name` or a git URL, shallow-cloned |
+| neither | The bundled `sample-data/`, so a fresh clone just runs |
+
+`ALBUM_CLUB_DATA_TOKEN` authenticates the clone of a private repo, and
+`ALBUM_CLUB_DATA_REF` picks a branch or tag. `npm run data` re-runs the fetch on
+its own.
+
+### Setting up a new club
+
+1. Create a repo from `templates/data-repo/` and fill in the YAML.
+2. Create a Vercel project from this app repo. Set `ALBUM_CLUB_DATA_REPO`, and
+   for a private data repo `ALBUM_CLUB_DATA_TOKEN`: a fine-grained GitHub token
+   with read-only Contents access to that one repo.
+3. In Vercel, Project Settings → Git → Deploy Hooks, create a hook for the
+   production branch. Save its URL in the data repo as the Actions secret
+   `VERCEL_DEPLOY_HOOK`. Every push to the data repo's `main` now redeploys.
+
+Pushes to this app repo still redeploy every club's project as usual.
 
 ## Running locally
 
 ```shell
-cp .env.example .env.local   # then fill in SITE_TITLE etc.
+cp .env.example .env.local   # optionally point ALBUM_CLUB_DATA_DIR at a data repo
 npm install
 npm run dev
 ```
@@ -24,8 +63,9 @@ There is also a `docker-compose up` setup.
 ## Architecture
 
 ```
-data/albums.yml        # content source 
-data/hosts.yml         # host name -> display name
+scripts/fetch-data.mjs # fills data/ and public/covers/ from a data repo
+data/                  # fetched content (gitignored)
+sample-data/           # fallback content when no data repo is set
 lib/schema.ts          # zod schema; the build fails on violations
 lib/content.ts         # read + validate + derive, once per build
 lib/routes.ts          # resolves a root-level slug to a page kind
@@ -58,18 +98,22 @@ box, `/stats` and `/getter` all fetch it.
 
 ## Editing content
 
-Add an album to the top of `data/albums.yml`. Only `number`, `artist`, `title`,
+Content is edited in the data repo, not here. Set `ALBUM_CLUB_DATA_DIR` to a
+local checkout of it to preview changes with `npm run dev`.
+
+Add an album to the top of `albums.yml`. Only `number`, `artist`, `title`,
 `hosted_by` and `played_on` are required; the views already cope with the rest
-being absent. `hosted_by` must match a `name` in `data/hosts.yml` or the build
+being absent. `hosted_by` must match a `name` in `hosts.yml` or the build
 fails.
 
-Covers go in `public/covers/` and are referenced as
+Covers go in the data repo's `covers/` and are referenced as
 `cover: ../images/covers/<file>`, rewritten to a public URL by the schema. An
 album with no local cover falls back to `cover_external`.
 
 After adding art, run `npm run optimise-covers`. It re-encodes anything that is
 not already WebP within a 1000px ceiling, renames the file, and updates the
-`cover:` paths in `data/albums.yml` to match. Covers arrive at wildly varying
+`cover:` paths in `albums.yml` to match. With `ALBUM_CLUB_DATA_DIR` set, it
+works on the data repo checkout through the symlinks, so commit the result there. Covers arrive at wildly varying
 sizes — the initial pass took 115MB down to 17MB — and while `next/image`
 re-encodes on the fly so delivered bytes are unchanged, the originals are dead
 repo and deploy weight. The script is safe to re-run: a cover already within the
@@ -92,11 +136,15 @@ files no album uses. Pass `-- --dry-run` to see what it would do first.
 ## Environment variables
 
 All are read at build time, so changing one needs a rebuild. See `.env.example`.
+The data source variables are covered under [Data repos](#data-repos).
 
-| Variable | Purpose |
-| --- | --- |
-| `SITE_TITLE` | Header text and page-title suffix |
-| `SITE_URL` | Metadata base for absolute URLs |
-| `GOOGLE_FONT_NAME` | Google Font to load, exposed as `--font-name` |
-| `GOOGLE_ANALYTICS_ID` | Optional; no script is injected when unset |
-| `NEXT_PUBLIC_SPOTIFY_TOKEN` | Optional; `/getter` only |
+The site settings default to the data repo's `site.yml`; a non-empty env var
+overrides the file.
+
+| Variable | `site.yml` key | Purpose |
+| --- | --- | --- |
+| `SITE_TITLE` | `title` | Header text and page-title suffix |
+| `SITE_URL` | `url` | Metadata base for absolute URLs |
+| `GOOGLE_FONT_NAME` | `font` | Google Font to load, exposed as `--font-name` |
+| `GOOGLE_ANALYTICS_ID` | `google_analytics_id` | Optional; no script is injected when unset |
+| `NEXT_PUBLIC_SPOTIFY_TOKEN` | | Optional; `/getter` only |
