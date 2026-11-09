@@ -13,8 +13,8 @@
  *                          optionally ALBUM_CLUB_DATA_REF for a branch or tag.
  *   (neither)              The bundled `sample-data/`, so a fresh clone runs.
  *
- * A data repo holds `albums.yml`, `hosts.yml`, an optional `site.yml` and a
- * `covers/` directory. See `templates/data-repo/`.
+ * A data repo holds `albums.yml`, `hosts.yml`, an optional `site.yml`, a
+ * `covers/` directory and optionally `lists/` (best-of lists named in site.yml). See `templates/data-repo/`.
  */
 
 import { execFileSync } from "node:child_process";
@@ -63,6 +63,8 @@ function install(source) {
     const from = path.join(source, file);
     if (fs.existsSync(from)) fs.copyFileSync(from, path.join(DATA, file));
   }
+  const lists = path.join(source, "lists");
+  if (fs.existsSync(lists)) fs.cpSync(lists, path.join(DATA, "lists"), { recursive: true });
   const covers = path.join(source, "covers");
   if (fs.existsSync(covers)) fs.cpSync(covers, COVERS, { recursive: true });
   else fs.mkdirSync(COVERS, { recursive: true });

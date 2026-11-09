@@ -87,6 +87,47 @@ const emptyFileAsList = <T extends z.ZodTypeAny>(item: T) =>
 export const AlbumsFileSchema = emptyFileAsList(AlbumSchema);
 export const HostsFileSchema = emptyFileAsList(HostSchema);
 
+/**
+ * One album on a published best-of list. `key` is whatever the list's `link`
+ * style needs to point at this entry (an anchor id, a path segment or a query
+ * value); without one the link falls back to a text fragment on `text`, or on
+ * the title.
+ */
+const ListEntry = z.object({
+  rank: z.number().int().nullish(),
+  artist: z.string(),
+  title: z.string(),
+  year: z.number().int().nullish(),
+  key: z.string().nullish(),
+  text: z.string().nullish(),
+});
+
+/**
+ * How an entry's link is built from the list `url`:
+ *
+ *   fragment  url#key
+ *   path      url/key
+ *   query     url?param=key
+ *   text      url#:~:text=… (a browser text fragment, needs no key)
+ */
+const ListLinkStyle = z.enum(["fragment", "path", "query", "text"]);
+
+/**
+ * A best-of list declared in `site.yml`. Albums are matched to its entries by
+ * artist and title at build time, so a newly added album picks up any list it
+ * is on without touching `albums.yml`. `entries` is inline, or a path to a
+ * YAML file in the data repo (e.g. `lists/guardian.yml`).
+ */
+const BestOfList = z.object({
+  name: z.string(),
+  url: z.string(),
+  link: ListLinkStyle.default("text"),
+  param: z.string().nullish(),
+  entries: z.union([z.string(), z.array(ListEntry)]),
+});
+
+export const ListEntriesFileSchema = emptyFileAsList(ListEntry);
+
 /** `site.yml`: optional, and so is every key in it. */
 export const SiteFileSchema = z.preprocess(
   (value) => value ?? {},
@@ -95,6 +136,7 @@ export const SiteFileSchema = z.preprocess(
     url: z.string().nullish(),
     font: z.string().nullish(),
     google_analytics_id: z.string().nullish(),
+    lists: z.array(BestOfList).nullish(),
   }),
 );
 
@@ -102,3 +144,5 @@ export type Album = z.infer<typeof AlbumSchema>;
 export type Host = z.infer<typeof HostSchema>;
 export type Track = z.infer<typeof Track>;
 export type Link = z.infer<typeof Link>;
+export type ListEntry = z.infer<typeof ListEntry>;
+export type BestOfList = z.infer<typeof BestOfList>;

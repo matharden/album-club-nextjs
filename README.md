@@ -12,10 +12,31 @@ A data repo looks like `templates/data-repo/`:
 ```
 albums.yml                       # newest first
 hosts.yml                        # host name -> display name
-site.yml                         # optional: title, url, font, google_analytics_id
+site.yml                         # optional: title, url, font, google_analytics_id, lists
+lists/                           # optional: best-of list entries named in site.yml
 covers/                          # cover art, referenced as ../images/covers/<file>
 .github/workflows/deploy.yml     # pings a Vercel deploy hook on push to main
 ```
+
+### Best-of lists
+
+`site.yml` can name published best-of lists. Each album page then shows the
+lists that album is on, matched by artist and title at build time, so a new
+album picks them up without any edit to `albums.yml`:
+
+```yaml
+lists:
+  - name: "The Guardian: 100 best albums of the 21st century"
+    url: https://www.theguardian.com/music/2019/sep/13/100-best-albums-of-the-21st-century
+    link: fragment   # fragment (url#key) | path (url/key) | query (url?param=key) | text
+    entries: lists/guardian-21st-century.yml   # or an inline list
+```
+
+An entry is `artist`, `title` and optionally `rank`, `year` and `key` (the
+anchor, path segment or query value for that entry). With `link: text`, or an
+entry without a `key`, the link is a browser text fragment on the title (or on
+the entry's `text`). The entries live in the data repo rather than being
+scraped, so builds stay fast and don't break when a publisher changes its page.
 
 `scripts/fetch-data.mjs` runs before `dev` and `build` and fills the gitignored
 `data/` and `public/covers/` from the first source that is set:

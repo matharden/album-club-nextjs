@@ -7,6 +7,7 @@ import { Grid, GridItem } from "@/components/Grid";
 import Layout from "@/components/Layout";
 import AlbumNumber from "@/components/Number";
 import { tagSlug, type AlbumWithHost } from "@/lib/content";
+import type { ListAppearance } from "@/lib/lists";
 import { rangeToDuration, toMinutes } from "@/lib/utils";
 
 import styles from "./album.module.scss";
@@ -35,8 +36,10 @@ export default function AlbumView({
   previous,
   next,
   title,
+  lists,
 }: {
   album: AlbumWithHost;
+  lists: ListAppearance[];
   previous: AlbumWithHost | null;
   next: AlbumWithHost | null;
   title: string;
@@ -107,6 +110,17 @@ export default function AlbumView({
               {tags.map((tag) => (
                 <li key={tag}>
                   <Link href={`/tag/${tagSlug(tag)}`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
+          {lists.length > 0 && (
+            <ul className={styles.lists}>
+              {lists.map((list) => (
+                <li key={list.url}>
+                  <a href={list.url}>
+                    {list.rank != null && <strong>#{list.rank}</strong>} {list.name}
+                  </a>
                 </li>
               ))}
             </ul>

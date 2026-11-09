@@ -42,9 +42,11 @@ export default async function SlugPage({ params }: Params) {
   switch (route.kind) {
     case "album": {
       const { previous, next } = await getNeighbours(route.album.slug);
+      const { listsByAlbum } = await getContent();
       return (
         <AlbumView
           album={route.album}
+          lists={listsByAlbum.get(route.album.number) ?? []}
           previous={previous}
           next={next}
           title={siteMetadata.title}

@@ -7,6 +7,7 @@ import { cache } from "react";
 import yaml from "js-yaml";
 import { kebabCase } from "lodash";
 
+import { matchLists } from "./lists";
 import {
   AlbumsFileSchema,
   HostsFileSchema,
@@ -140,10 +141,14 @@ export const getContent = cache(async () => {
     }
   }
 
+  // Best-of lists from site.yml, matched by artist and title.
+  const listsByAlbum = matchLists(albums, siteFile.lists ?? [], DATA_DIR);
+
   return {
     albums,
     hosts,
     byTag,
+    listsByAlbum,
     /** Every tag, alphabetical by name. */
     tags: [...byTag.values()].sort((a, b) => a.name.localeCompare(b.name)),
     byNumber,
