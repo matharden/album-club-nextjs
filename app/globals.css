@@ -3,14 +3,23 @@
   --color-background: #fff;
   --color-link: #000;
 
-  --color-1960s: #c6604e;
-  --color-1970s: #a04b5b;
-  --color-1980s: #a5597a;
-  --color-1990s: #56787a;
-  --color-2000s: #6d8e58;
-  --color-2010s: #c2af8e;
-  --color-2020s: #9c917a;
-  --color-2030s: #524635;
+  --color-coral: #d89184;
+  --color-siena: #be818d;
+  --color-mauve: #c18ca2;
+  --color-steel: #89a1a1;
+  --color-olive: #9ab08b;
+  --color-taupe: #d4c8b1;
+  --color-ashen: #b9b2a2;
+  --color-umber: #857e72;
+
+  --color-1960s: var(--color-coral);
+  --color-1970s: var(--color-siena);
+  --color-1980s: var(--color-mauve);
+  --color-1990s: var(--color-steel);
+  --color-2000s: var(--color-olive);
+  --color-2010s: var(--color-taupe);
+  --color-2020s: var(--color-ashen);
+  --color-2030s: var(--color-umber);
 
   --font-sans: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   --font-serif: var(--font-name, Caprasimo);
