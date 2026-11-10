@@ -119,7 +119,7 @@ export default function AlbumView({
             <ul className={styles.lists}>
               {lists.map((list) => (
                 <li key={list.url}>
-                  <BestOfBadge rank={list.rank} url={list.url}>
+                  <BestOfBadge rank={list.rank} url={list.url} color={list.color}>
                     <Link href={`/lists/${list.slug}`}>{list.name}</Link>
                   </BestOfBadge>
                 </li>

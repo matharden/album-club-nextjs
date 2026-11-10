@@ -1,5 +1,6 @@
 .badge {
-  background: var(--color-taupe);
+  --color: var(--color-taupe);
+  background: var(--color);
   border-radius: 6px;
   display: inline-block;
   padding: .25em .6em;

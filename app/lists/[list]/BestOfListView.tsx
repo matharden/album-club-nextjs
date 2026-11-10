@@ -32,7 +32,7 @@ export default function BestOfListView({
         {list.albums.map(({ album, rank, url }) => (
           <GridItem key={album.number} id={album.number}>
             <div className={styles.rank}>
-              <BestOfBadge rank={rank} url={url} />
+              <BestOfBadge rank={rank} url={url} color={list.color} />
             </div>
             <AlbumNumber data={album} />
             <Album data={album} />

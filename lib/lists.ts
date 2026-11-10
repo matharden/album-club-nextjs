@@ -16,6 +16,8 @@ export type ListAppearance = {
   /** The list's page on this site, `/lists/<slug>`. */
   slug: string;
   name: string;
+  /** Badge colour from site.yml, any CSS colour. */
+  color: string | null;
   rank: number | null;
   /** Deep link to the entry on the list's page. */
   url: string;
@@ -26,6 +28,7 @@ export type ResolvedList<A extends Album = Album> = {
   slug: string;
   name: string;
   url: string;
+  color: string | null;
   /** Matched albums, by rank (best first), unranked ones last in file order. */
   albums: { album: A; rank: number | null; url: string }[];
 };
@@ -134,7 +137,13 @@ export function matchLists<A extends Album>(
         const rank = entry.rank ?? null;
         const url = entryUrl(list, entry);
         matched.push({ album, rank, url });
-        const appearance: ListAppearance = { slug, name: list.name, rank, url };
+        const appearance: ListAppearance = {
+          slug,
+          name: list.name,
+          color: list.color ?? null,
+          rank,
+          url,
+        };
         const existing = byAlbum.get(album.number);
         if (existing) existing.push(appearance);
         else byAlbum.set(album.number, [appearance]);
@@ -143,7 +152,13 @@ export function matchLists<A extends Album>(
     // Stable sort: unranked entries keep file order after the ranked ones.
     matched.sort((a, b) => (a.rank ?? Infinity) - (b.rank ?? Infinity));
 
-    resolved.push({ slug, name: list.name, url: list.url, albums: matched });
+    resolved.push({
+      slug,
+      name: list.name,
+      url: list.url,
+      color: list.color ?? null,
+      albums: matched,
+    });
   }
 
   return { lists: resolved, byAlbum };

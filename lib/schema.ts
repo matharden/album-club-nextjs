@@ -123,6 +123,15 @@ const BestOfList = z.object({
   url: z.string(),
   link: ListLinkStyle.default("text"),
   param: z.string().nullish(),
+  /**
+   * Badge background: any CSS colour, e.g. `blue`, `#c00`, `oklch(70% 0.1 200)`
+   * or `var(--color-siena)`. Characters that could end the declaration are
+   * refused, since the value is written into a style attribute.
+   */
+  color: z
+    .string()
+    .regex(/^[^;{}<>]+$/, "Expected a CSS colour")
+    .nullish(),
   entries: z.union([z.string(), z.array(ListEntry)]),
 });
 

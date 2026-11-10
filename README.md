@@ -30,6 +30,7 @@ lists:
     url: https://www.theguardian.com/music/2019/sep/13/100-best-albums-of-the-21st-century
     link: fragment   # fragment (url#key) | path (url/key) | query (url?param=key) | text
     entries: lists/guardian-21st-century.yml   # or an inline list
+    color: var(--color-steel)   # optional badge colour, any CSS colour
 ```
 
 Each list also gets a page at `/lists/<entries file name>` (e.g.
