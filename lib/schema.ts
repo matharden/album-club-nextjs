@@ -91,7 +91,7 @@ export const HostsFileSchema = emptyFileAsList(HostSchema);
  * One album on a published best-of list. `key` is whatever the list's `link`
  * style needs to point at this entry (an anchor id, a path segment or a query
  * value); without one the link falls back to a text fragment on `text`, or on
- * the title.
+ * the title. `url` overrides the list's for lists spread over several pages.
  */
 const ListEntry = z.object({
   rank: z.number().int().nullish(),
@@ -100,6 +100,8 @@ const ListEntry = z.object({
   year: z.number().int().nullish(),
   key: z.string().nullish(),
   text: z.string().nullish(),
+  /** This entry's page, for a list split over several; defaults to the list `url`. */
+  url: z.string().nullish(),
 });
 
 /**

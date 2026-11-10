@@ -75,7 +75,7 @@ function textFragment(text: string): string {
 
 export function entryUrl(list: BestOfList, entry: ListEntry): string {
   const key = entry.key ? encodeURIComponent(entry.key) : null;
-  const base = list.url.replace(/#.*$/, "");
+  const base = (entry.url ?? list.url).replace(/#.*$/, "");
 
   if (key && list.link === "fragment") return `${base}#${key}`;
   if (key && list.link === "path") return `${base.replace(/\/+$/, "")}/${key}`;
@@ -133,7 +133,16 @@ export function matchLists<A extends Album>(
 
     const matched: ResolvedList<A>["albums"] = [];
     for (const entry of loadEntries(list, dataDir)) {
-      for (const album of byKey.get(matchKey(entry.artist, entry.title)) ?? []) {
+      // A list's subtitle in brackets, e.g. "Scary Monsters (And Super
+      // Creeps)", still matches the club's shorter "Scary Monsters". Only the
+      // list side is trimmed, so a club's "Liquid Swords (Instrumentals)"
+      // never matches a list's plain "Liquid Swords".
+      const short = entry.title.replace(/\s*[([][^)\]]*[)\]]\s*$/, "");
+      const found =
+        byKey.get(matchKey(entry.artist, entry.title)) ??
+        (short && short !== entry.title ? byKey.get(matchKey(entry.artist, short)) : undefined) ??
+        [];
+      for (const album of found) {
         const rank = entry.rank ?? null;
         const url = entryUrl(list, entry);
         matched.push({ album, rank, url });

@@ -36,8 +36,9 @@ lists:
 Each list also gets a page at `/lists/<entries file name>` (e.g.
 `/lists/guardian-21st-century`) showing the club's albums on it, by rank.
 
-An entry is `artist`, `title` and optionally `rank`, `year` and `key` (the
-anchor, path segment or query value for that entry). With `link: text`, or an
+An entry is `artist`, `title` and optionally `rank`, `year`, `key` (the
+anchor, path segment or query value for that entry) and `url` (the entry's own
+page, when a list is split over several pages). With `link: text`, or an
 entry without a `key`, the link is a browser text fragment on the title (or on
 the entry's `text`). The entries live in the data repo rather than being
 scraped, so builds stay fast and don't break when a publisher changes its page.
