@@ -142,12 +142,15 @@ export const getContent = cache(async () => {
   }
 
   // Best-of lists from site.yml, matched by artist and title.
-  const listsByAlbum = matchLists(albums, siteFile.lists ?? [], DATA_DIR);
+  const { lists, byAlbum: listsByAlbum } = matchLists(albums, siteFile.lists ?? [], DATA_DIR);
 
   return {
     albums,
     hosts,
     byTag,
+    /** Best-of lists from site.yml, each with the club albums on it. */
+    lists,
+    bySlugList: new Map(lists.map((list) => [list.slug, list])),
     listsByAlbum,
     /** Every tag, alphabetical by name. */
     tags: [...byTag.values()].sort((a, b) => a.name.localeCompare(b.name)),

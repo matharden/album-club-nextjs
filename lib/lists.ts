@@ -13,11 +13,37 @@ import {
 
 /** An album's place on one best-of list, ready to render. */
 export type ListAppearance = {
+  /** The list's page on this site, `/lists/<slug>`. */
+  slug: string;
   name: string;
   rank: number | null;
   /** Deep link to the entry on the list's page. */
   url: string;
 };
+
+/** A best-of list with the club's albums that are on it. */
+export type ResolvedList<A extends Album = Album> = {
+  slug: string;
+  name: string;
+  url: string;
+  /** Matched albums, by rank (best first), unranked ones last in file order. */
+  albums: { album: A; rank: number | null; url: string }[];
+};
+
+/**
+ * URL slug for a list: its entries file without the extension
+ * (`lists/guardian-21st-century.yml` -> `guardian-21st-century`), or the
+ * slugified name for an inline list.
+ */
+export function listSlug(list: BestOfList): string {
+  const source = typeof list.entries === "string"
+    ? path.basename(list.entries).replace(/\.ya?ml$/i, "")
+    : list.name;
+  return source
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 /**
  * Loose key for matching an album to a list entry: case, accents, "&"/"and",
@@ -75,18 +101,18 @@ function loadEntries(list: BestOfList, dataDir: string): ListEntry[] {
 }
 
 /**
- * Matches every album against every list. Returns album number -> the lists
- * it appears on, in `site.yml` order.
+ * Matches every album against every list. Returns the lists in `site.yml`
+ * order, and album number -> the lists that album appears on.
  */
-export function matchLists(
-  albums: Album[],
+export function matchLists<A extends Album>(
+  albums: A[],
   lists: BestOfList[],
   dataDir: string,
-): Map<number, ListAppearance[]> {
-  const result = new Map<number, ListAppearance[]>();
-  if (lists.length === 0) return result;
+): { lists: ResolvedList<A>[]; byAlbum: Map<number, ListAppearance[]> } {
+  const byAlbum = new Map<number, ListAppearance[]>();
+  const resolved: ResolvedList<A>[] = [];
 
-  const byKey = new Map<string, Album[]>();
+  const byKey = new Map<string, A[]>();
   for (const album of albums) {
     const key = matchKey(album.artist, album.title);
     const existing = byKey.get(key);
@@ -94,20 +120,31 @@ export function matchLists(
     else byKey.set(key, [album]);
   }
 
+  const seen = new Set<string>();
   for (const list of lists) {
+    const slug = listSlug(list);
+    if (seen.has(slug)) {
+      throw new Error(`site.yml: two lists share the slug "${slug}"; give one a different entries file or name.`);
+    }
+    seen.add(slug);
+
+    const matched: ResolvedList<A>["albums"] = [];
     for (const entry of loadEntries(list, dataDir)) {
       for (const album of byKey.get(matchKey(entry.artist, entry.title)) ?? []) {
-        const appearance: ListAppearance = {
-          name: list.name,
-          rank: entry.rank ?? null,
-          url: entryUrl(list, entry),
-        };
-        const existing = result.get(album.number);
+        const rank = entry.rank ?? null;
+        const url = entryUrl(list, entry);
+        matched.push({ album, rank, url });
+        const appearance: ListAppearance = { slug, name: list.name, rank, url };
+        const existing = byAlbum.get(album.number);
         if (existing) existing.push(appearance);
-        else result.set(album.number, [appearance]);
+        else byAlbum.set(album.number, [appearance]);
       }
     }
+    // Stable sort: unranked entries keep file order after the ranked ones.
+    matched.sort((a, b) => (a.rank ?? Infinity) - (b.rank ?? Infinity));
+
+    resolved.push({ slug, name: list.name, url: list.url, albums: matched });
   }
 
-  return result;
+  return { lists: resolved, byAlbum };
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Album from "@/components/Album";
+import BestOfBadge from "@/components/BestOf";
 import { Grid, GridItem } from "@/components/Grid";
 import Layout from "@/components/Layout";
 import AlbumNumber from "@/components/Number";
@@ -118,9 +119,9 @@ export default function AlbumView({
             <ul className={styles.lists}>
               {lists.map((list) => (
                 <li key={list.url}>
-                  <a href={list.url}>
-                    {list.rank != null && <strong>#{list.rank}</strong>} {list.name}
-                  </a>
+                  <BestOfBadge rank={list.rank} url={list.url}>
+                    <Link href={`/lists/${list.slug}`}>{list.name}</Link>
+                  </BestOfBadge>
                 </li>
               ))}
             </ul>

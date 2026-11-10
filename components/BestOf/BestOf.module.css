@@ -1,0 +1,5 @@
+.badge {
+  background: alpha(from var(--color-2010s) / 70%);
+  display: inline-block;
+  padding: .25em .6em;
+}

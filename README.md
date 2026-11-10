@@ -32,6 +32,9 @@ lists:
     entries: lists/guardian-21st-century.yml   # or an inline list
 ```
 
+Each list also gets a page at `/lists/<entries file name>` (e.g.
+`/lists/guardian-21st-century`) showing the club's albums on it, by rank.
+
 An entry is `artist`, `title` and optionally `rank`, `year` and `key` (the
 anchor, path segment or query value for that entry). With `link: text`, or an
 entry without a `key`, the link is a browser text fragment on the title (or on
