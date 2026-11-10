@@ -74,12 +74,17 @@ nav > .navGroup {
   > a,
   > .navText {
     margin: 0.25rem 0;
+    min-width: 6ch;
   }
 }
 
 .navGroupGrid .navGroupItem {
   display: inline-block;
   margin: 0.25rem 1rem;
+}
+
+.vert .navGroupItem {
+  display: block;
 }
 
 .navText {

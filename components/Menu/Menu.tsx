@@ -7,6 +7,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Icon from "@/components/Icon";
 import Search from "@/components/Search";
 
+import Lists from "./Lists";
 import Years from "./Years";
 import styles from "./Menu.module.scss";
 
@@ -69,6 +70,7 @@ const Menu = ({
             </li>
           </ul>
           <Years />
+          <Lists />
         </nav>
       </div>
     </dialog>
