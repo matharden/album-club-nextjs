@@ -1,6 +1,6 @@
 .el {
   --color: var(--color-taupe);
-  align-items: center;
+  align-items: flex-end;
   display: inline-flex;
   position: relative;
 }
@@ -20,8 +20,13 @@
   background: var(--color);
   border: 3px solid var(--color);
   border-radius: 6px;
+  flex-shrink: 0;
   margin-right: 0.5rem;
   min-width: 3ch;
   padding: 4px;
   text-align: center;
+}
+
+.el a:last-child {
+  padding-bottom: 7px;
 }
