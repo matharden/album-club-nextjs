@@ -23,7 +23,8 @@ const Number = ({ data, sticky }: { data: NumberAlbum; sticky?: boolean }) => {
         suppressHydrationWarning
         title={`${formatDistance(playedOn, new Date())} ago`}
       >
-        {format(playedOn, "MMM yyyy")}
+        <span className={styles.long}>{format(playedOn, "MMM yyyy")}</span>
+        <span className={styles.short}>{format(playedOn, "M/yyyy")}</span>
       </time>
       <span className={styles.host}>
         <Link href={`/${data.host.name}`}>{data.host.display_name}</Link>

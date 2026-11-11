@@ -1,6 +1,8 @@
 .el {
   align-items: center;
   border-radius: 6px;
+  container-name: sidebar;
+  container-type: inline-size;
   display: flex;
   flex-flow: row nowrap;
   font-family: var(--font-sans);
@@ -41,6 +43,19 @@
 
 .date {
   flex: 1;
+}
+
+.short {
+  display: none;
+}
+
+@container sidebar (width < 180px) {
+  .long {
+    display: none;
+  }
+  .short {
+    display: inline;
+  }
 }
 
 // .host {
