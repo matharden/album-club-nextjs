@@ -27,6 +27,6 @@
   text-align: center;
 }
 
-.el a:last-child {
+.el a:not(.badge) {
   padding-bottom: 7px;
 }
