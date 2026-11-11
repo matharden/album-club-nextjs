@@ -1,3 +1,4 @@
+import cn from "classnames";
 import Album from "@/components/Album";
 import BestOfBadge from "@/components/BestOf";
 import { Grid, GridItem } from "@/components/Grid";
@@ -21,7 +22,7 @@ export default function BestOfListView({
   return (
     <Layout title={title}>
       <h1>{list.name}</h1>
-      <p className="stat">
+      <p className={cn("stat", styles.stat)} style={{ "--color": list.color } as React.CSSProperties}>
         {count} album{count !== 1 && "s"}
       </p>
       <p>
@@ -33,8 +34,8 @@ export default function BestOfListView({
           <GridItem key={album.number} id={album.number}>
             <div className={styles.rank}>
               <BestOfBadge rank={rank} url={url} color={list.color} />
+              <AlbumNumber data={album} />
             </div>
-            <AlbumNumber data={album} />
             <Album data={album} />
           </GridItem>
         ))}
