@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
+import cn from "classnames";
 
 import styles from "./BestOf.module.css";
 
@@ -19,8 +20,18 @@ const BestOfBadge = ({
   color?: string | null;
   children?: ReactNode;
 }) => (
-  <span className={styles.badge} style={color ? ({ "--color": color } as CSSProperties) : undefined}>
-    <a href={url}>{rank != null ? <strong>#{rank}</strong> : "On"}</a>
+  <span
+    className={cn(styles.el, {
+      [styles["has-child"]]: children,
+    })}
+    style={color ? ({ "--color": color } as CSSProperties) : undefined}
+  >
+    <a
+      href={url}
+      className={styles.badge}
+    >
+      {rank != null ? <strong>#{rank}</strong> : "On"}
+    </a>
     {children && <> {children}</>}
   </span>
 );

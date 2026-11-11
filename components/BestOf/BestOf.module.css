@@ -1,7 +1,27 @@
-.badge {
+.el {
   --color: var(--color-taupe);
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+}
+
+.el.has-child::after {
+  bottom: 0;
+  content: "";
+  display: block;
   background: var(--color);
+  height: 3px;
+  left: 10px;
+  position: absolute;
+  width: calc(100% - 10px);
+}
+
+.badge {
+  background: var(--color);
+  border: 3px solid var(--color);
   border-radius: 6px;
-  display: inline-block;
-  padding: .25em .6em;
+  margin-right: 0.5rem;
+  min-width: 3ch;
+  padding: 4px;
+  text-align: center;
 }
