@@ -14,7 +14,7 @@ const Number = ({ data, sticky }: { data: NumberAlbum; sticky?: boolean }) => {
 
   return (
     <div className={[styles.el, sticky && styles.sticky].filter(Boolean).join(" ")}>
-      <span className={styles.number}>#{data.number}</span>
+      <a href={`#${data.number}`} className={styles.number}>#{data.number}</a>
       <time
         className={styles.date}
         dateTime={formatISO(playedOn)}

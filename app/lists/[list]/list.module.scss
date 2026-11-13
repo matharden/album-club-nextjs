@@ -2,7 +2,7 @@
 .rank {
   display: flex;
   flex-wrap: nowrap;
-  margin: 2rem 0;
+  margin: calc(58px + 3rem) 0 2rem;
 
   > div {
     flex: 1;
